@@ -141,7 +141,7 @@ body {
     width: 100vw;
 }
 
-.main_header {
+#main_header {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -425,7 +425,6 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: left;
     overflow: auto;
     border-radius: 3px;
     flex-grow: 1;
@@ -562,7 +561,7 @@ footer ul li a:hover, footer ul li a:focus {
 }
 
 @media (max-width: 700px) {
-    .desktop {
+    .navbar.desktop, .desktop {
         display: none;
     }
 
@@ -651,7 +650,6 @@ footer ul li a:hover, footer ul li a:focus {
     #navbar_links_mobile {
         display: none;
         flex-direction: column;
-        align-items: left;
         justify-content: flex-start;
     }
 
