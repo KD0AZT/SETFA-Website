@@ -10,7 +10,7 @@ function placeHeader() {
     var newHeader = document.createElement("div");
     newHeader.setAttribute("id", "main_header");
     var xmlhttp = new XMLHttpRequest();
-    xmlhttp.open("GET", "./header.html", false);
+    xmlhttp.open("GET", "/header.html", false);
     xmlhttp.send();
     if (xmlhttp.status == 200) {
         newHeader.innerHTML = xmlhttp.responseText;
@@ -24,7 +24,7 @@ function placeNavbar() {
     var newNavbar = document.createElement("div");
     newNavbar.setAttribute("id", "navbar");
     var xmlhttp = new XMLHttpRequest();
-    xmlhttp.open("GET", "./navbar.html", false);
+    xmlhttp.open("GET", "/navbar.html", false);
     xmlhttp.send();
     if (xmlhttp.status == 200) {
         newNavbar.innerHTML = xmlhttp.responseText;
@@ -38,7 +38,7 @@ function placeSidebar() {
     var newSidebar = document.createElement("div");
     newSidebar.setAttribute("id", "sidebar");
     var xmlhttp = new XMLHttpRequest();
-    xmlhttp.open("GET", "./sidebar.html", false);
+    xmlhttp.open("GET", "/sidebar.html", false);
     xmlhttp.send();
     if (xmlhttp.status == 200) {
         newSidebar.innerHTML = xmlhttp.responseText;
@@ -52,7 +52,7 @@ function placeFooter() {
     var newFooter = document.createElement("footer");
     newFooter.setAttribute("id", "footer");
     var xmlhttp = new XMLHttpRequest();
-    xmlhttp.open("GET", "./footer.html", false);
+    xmlhttp.open("GET", "/footer.html", false);
     xmlhttp.send();
     if (xmlhttp.status == 200) {
         newFooter.innerHTML = xmlhttp.responseText;

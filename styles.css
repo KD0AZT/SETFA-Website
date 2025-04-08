@@ -586,7 +586,7 @@ footer ul li a:hover, footer ul li a:focus {
         height: 100%;
     }
     
-    .navbar.mobile{
+    .navbar.mobile {
         display: flex;
         flex-direction: row;
         align-items: center;

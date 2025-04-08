@@ -1,7 +1,7 @@
 let slideIndex = 0;
 let slides = [];
-slides[0] = "url(images/working.jpeg)";
-slides[1] = "url(images/engine.jpeg)";
+slides[0] = "url(/images/working.jpeg)";
+slides[1] = "url(/images/engine.jpeg)";
 let i = 3;
 showSlides();
 
