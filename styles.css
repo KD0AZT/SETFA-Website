@@ -241,7 +241,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: .5em;
+    padding: 1em 0;
     text-decoration: none;
     border-bottom: 1px white solid;
 }
@@ -308,7 +308,7 @@ main {
     color: firebrick;
 }
 
-#news_feed {
+#news_feed, #contacts_feed, #privacy_policy {
     background-color: #dfd9cd;
     height: 750px;
     display: flex;
@@ -420,21 +420,14 @@ main {
 }
 
 #contacts_feed {
-    background-color: #dfd9cd;
-    height: 750px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
     overflow: auto;
-    border-radius: 3px;
-    flex-grow: 1;
-    margin-left: 2.5em;
     padding-top: 2em;
 }
 
 #contacts_title {
     color: black;
     text-align: center;
+    margin-bottom: .5em;
 }
 
 #contacts_emergency {
@@ -523,6 +516,40 @@ main {
 }
 
 #contacts_address a:hover, #contacts_address a:focus {
+    color: darkred;
+    text-decoration: underline;
+}
+
+#privacy_policy {
+    padding: 2em;
+    align-items: flex-start;
+}
+
+#privacy_policy_title {
+    color: firebrick;
+    font-size: 150%;
+    align-self: center;
+}
+
+#privacy_policy h4 {
+    background-color: firebrick;
+    width: 100%;
+    padding-left: 2em;
+    margin-top: 1em;
+}
+
+#privacy_policy p {
+    color: black;
+    padding-top: 1em;
+    padding-left: 2em;
+}
+
+#privacy_policy a {
+    color: firebrick;
+    text-decoration: none;
+}
+
+#privacy_policy a:hover, #privacy_policy a:focus {
     color: darkred;
     text-decoration: underline;
 }
@@ -670,13 +697,7 @@ footer ul li a:hover, footer ul li a:focus {
         display: none;
     }
 
-    #news_feed {
-        width: 92%;
-        flex: 1 1 50%;
-        margin: 0;
-    }
-
-    #contacts_feed {
+    #news_feed, #contacts_feed, #privacy_policy {
         width: 92%;
         flex: 1 1 50%;
         margin: 0;
