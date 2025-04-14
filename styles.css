@@ -203,7 +203,7 @@ main {
     flex-basis: 50%;
     flex-shrink: 1;
     height: 750px;
-    max-width: 30em;
+    width: 30em;
     background: none;
     display: flex;
     flex-direction: column;
@@ -317,7 +317,7 @@ main {
     align-items: center;
     overflow: hidden;
     border-radius: 3px;
-    flex-grow: 1;
+    flex-grow: 0;
     margin-left: 2.5em;
 }
 
@@ -371,13 +371,14 @@ main {
 .article_content {
     display: flex;
     flex-direction: column;
+    flex: 1 1;
 }
 
 .article_image {
     height: 7vw;
     width: 7vw;
     object-fit: cover;
-    margin-right: .5em;
+    margin-right: 1em;
     border: 3px whitesmoke solid;
     box-shadow: 2px 2px 2px grey;
     border-radius: 3px;
