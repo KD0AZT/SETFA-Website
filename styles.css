@@ -175,7 +175,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 #slogan_phone * {
@@ -321,7 +321,7 @@ main {
     color: firebrick;
 }
 
-#news_feed, #contacts_feed, #privacy_policy {
+#news_feed, #contacts_feed, #privacy_policy, #mission_statement {
     background-color: #dfd9cd;
     height: 95%;
     display: flex;
@@ -395,6 +395,25 @@ main {
     border: 3px whitesmoke solid;
     box-shadow: 2px 2px 2px grey;
     border-radius: 3px;
+}
+
+#mission_statement_title {
+    color: firebrick;
+    margin: 1em;
+}
+
+#mission_statement_text {
+    color: black;
+    font-size: 125%;
+    line-height: 200%;
+    font-weight: bold;
+    margin-bottom: 2em;
+}
+
+#mission_statement_image {
+    width: 85%;
+    border: 5px white solid;
+    box-shadow: 1px 1px 5px black;
 }
 
 @media (min-width: 1500px) {
@@ -694,6 +713,15 @@ footer ul li a:hover, footer ul li a:focus {
         justify-content: flex-start;
     }
 
+    #slogan_phone {
+        justify-content: center;
+    }
+
+    #slogan_phone * {
+        font-size: 80%;
+        line-height: 65%;
+    }
+    
     main {
         flex-direction: column;
         align-items: center;
