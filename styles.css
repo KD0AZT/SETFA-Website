@@ -168,7 +168,7 @@ body {
     text-align: center;
     padding: 1em;
     width: 100%;
-    height: 35%;
+    height: 45%;
     border-top: 3px goldenrod solid;
     border-bottom: 3px goldenrod solid;
     background-color: #1a1a1a;
@@ -206,10 +206,9 @@ main {
 }
 
 #sidebar {
-    flex-basis: 50%;
-    flex-shrink: 1;
+    flex-basis: 75%;
     height: 95%;
-    width: 30em;
+    max-width: 30em;
     background: none;
     display: flex;
     flex-direction: column;
@@ -282,6 +281,7 @@ main {
     display: flex;
     flex-direction: column;
     height: 25%;
+    min-height: 15em;
     border-radius: 0 0 3px 3px;
 }
 
@@ -321,17 +321,18 @@ main {
     color: firebrick;
 }
 
-#news_feed, #contacts_feed, #privacy_policy, #mission_statement {
+.main_info {
     background-color: #dfd9cd;
     height: 95%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    overflow: hidden;
+    overflow: scroll;
     border-radius: 3px;
     flex-grow: 0;
     margin-left: 2.5em;
+    padding: 2em;
 }
 
 #burn_ban {
@@ -397,12 +398,13 @@ main {
     border-radius: 3px;
 }
 
-#mission_statement_title {
+.subpage_title {
     color: firebrick;
     margin: 1em;
+    text-align: center;
 }
 
-#mission_statement_text {
+.subpage_text {
     color: black;
     font-size: 125%;
     line-height: 200%;
@@ -414,6 +416,59 @@ main {
     width: 85%;
     border: 5px white solid;
     box-shadow: 1px 1px 5px black;
+}
+
+.commissioner {
+    width: 100%;
+}
+
+.commissioner * {
+    color: black;
+}
+
+#commissioners_title {
+    margin-top: 0;
+}
+
+.commissioner_name {
+    color: white;
+    background-color: firebrick;
+    padding: .2em .5em;
+}
+
+.commissioner_image {
+    float: left;
+    margin: 1em;
+    border: 4px white solid;
+    box-shadow: 1px 1px 5px black;
+}
+
+.commissioner p {
+    margin: 1em;
+}
+
+.commissioner p a {
+    color: firebrick;
+    text-decoration: none;
+}
+
+.commissioner p a:hover, .commissioner p a:focus {
+    color: darkred;
+    text-decoration: underline;
+}
+
+.commissioner ul {
+    list-style: none;
+}
+
+.community_involvement_title {
+    margin-top: 3.5em;
+    margin-left: 1em;
+}
+
+.awards_title {
+    margin-top: 1em;
+    margin-left: 1em;
 }
 
 @media (min-width: 1500px) {
@@ -721,7 +776,7 @@ footer ul li a:hover, footer ul li a:focus {
         font-size: 80%;
         line-height: 65%;
     }
-    
+
     main {
         flex-direction: column;
         align-items: center;
