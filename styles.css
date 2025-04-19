@@ -462,13 +462,42 @@ main {
 }
 
 .community_involvement_title {
-    margin-top: 3.5em;
+    margin-top: 5.5em;
     margin-left: 1em;
 }
 
 .awards_title {
     margin-top: 1em;
     margin-left: 1em;
+}
+
+#fire_chief_image {
+    float: left;
+    margin: 1.5em;
+    border: 4px white solid;
+    box-shadow: 1px 1px 5px black;
+}
+
+.fire_chief_text {
+    font-weight: normal;
+}
+
+#fire_chief {
+    display: block;
+}
+
+.fire_chief_text a {
+    color: firebrick;
+    text-decoration: none;
+}
+
+.fire_chief_text a:hover, .fire_chief_text a:focus {
+    color: darkred;
+    text-decoration: underline;
+}
+
+#fire_chief_signature {
+    font-style: italic;
 }
 
 .news_title {
