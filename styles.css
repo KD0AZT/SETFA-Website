@@ -507,8 +507,22 @@ main {
 
 .news_text {
     color: black;
+    padding: 0 3em;
     padding-bottom: 1em;
     width: 100%;
+    font-size: 125%;
+    line-height: 1.5em;
+}
+
+#milestone_list {
+    align-self: flex-start;
+    padding-bottom: 1em;
+}
+
+.news_list_item {
+    color: black;
+    margin-left: 3em;
+    font-size: 121%;
 }
 
 .news_image {
@@ -517,6 +531,10 @@ main {
     box-shadow: 1px 1px 5px black;
 }
 
+.milestone_image {
+    max-width: 35%;
+    margin-bottom: 1em;
+}
 .news_download {
     width: 100%;
     margin-top: .5em;
@@ -529,7 +547,7 @@ main {
     text-decoration: underline;
 }
 
-.news_info .bold {
+.bold {
     font-weight: bold;
 }
 
@@ -548,6 +566,7 @@ main {
 
 .article_title:hover, .article_title:focus {
     color: darkred;
+    text-decoration: underline;
 }
 
 .article_date {
@@ -769,6 +788,7 @@ footer ul li a:hover, footer ul li a:focus {
         align-items: center;
         justify-content: space-between;
         padding: 1em;
+        height: 7em;
     }
     
     .patch.mobile {
@@ -829,9 +849,18 @@ footer ul li a:hover, footer ul li a:focus {
         flex-direction: column;
         justify-content: flex-start;
     }
+    
+    #main_header {
+        height: 10em;
+    }
+
+    .logo_slideshow {
+        display: none;
+    }
 
     #slogan_phone {
         justify-content: center;
+        height: 100%;
     }
 
     #slogan_phone * {
@@ -839,15 +868,17 @@ footer ul li a:hover, footer ul li a:focus {
         line-height: 65%;
     }
 
+    .content {
+        height: calc(100% - 7em);
+    }
+
     main {
         flex-direction: column;
+        flex-flow: column-reverse;
         align-items: center;
         justify-content: flex-start;
         padding: 1em 0;
-    }
-
-    .main_info {
-        margin: 0;
+        height: calc(100% - 10em);
     }
 
     #sidebar {
@@ -860,10 +891,11 @@ footer ul li a:hover, footer ul li a:focus {
         display: none;
     }
 
-    #news_feed, #contacts_feed, #privacy_policy {
+    .main_info {
         width: 92%;
-        flex: 1 1 50%;
+        flex: 1 1 80%;
         margin: 0;
+        margin-bottom: 2em;
     }
 
     .footer_second, .footer_third, .footer_fourth {
