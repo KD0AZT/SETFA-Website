@@ -330,9 +330,19 @@ main {
     align-items: center;
     overflow: scroll;
     border-radius: 3px;
-    flex-grow: 0;
+    flex-grow: 1;
     margin-left: 2.5em;
     padding: 2em;
+}
+
+.link {
+    color: firebrick !important;
+    text-decoration: none !important;
+}
+
+.link:hover, .link:focus {
+    color: darkred !important;
+    text-decoration: underline !important;
 }
 
 #burn_ban {
@@ -447,16 +457,6 @@ main {
     margin: 1em;
 }
 
-.commissioner p a {
-    color: firebrick;
-    text-decoration: none;
-}
-
-.commissioner p a:hover, .commissioner p a:focus {
-    color: darkred;
-    text-decoration: underline;
-}
-
 .commissioner ul {
     list-style: none;
 }
@@ -484,16 +484,6 @@ main {
 
 #fire_chief {
     display: block;
-}
-
-.fire_chief_text a {
-    color: firebrick;
-    text-decoration: none;
-}
-
-.fire_chief_text a:hover, .fire_chief_text a:focus {
-    color: darkred;
-    text-decoration: underline;
 }
 
 #fire_chief_signature {
@@ -535,16 +525,20 @@ main {
     max-width: 35%;
     margin-bottom: 1em;
 }
-.news_download {
+
+.annual_report_subtitle {
+    background-color: firebrick;
     width: 100%;
-    margin-top: .5em;
-    color: firebrick;
-    text-decoration: none;
+    padding: 0.5em 1em;
 }
 
-.news_download:hover, .news_download:focus {
-    color: darkred;
-    text-decoration: underline;
+.annual_report_download, .annual_report_text {
+    align-self: flex-start;
+    margin: 0.5em 1em;
+}
+
+.annual_report_text {
+    color: black;
 }
 
 .bold {
@@ -559,14 +553,7 @@ main {
 }
 
 .article_title {
-    color: firebrick;
-    text-decoration: none;
     font-weight: bold;
-}
-
-.article_title:hover, .article_title:focus {
-    color: darkred;
-    text-decoration: underline;
 }
 
 .article_date {
@@ -576,16 +563,6 @@ main {
 
 .article_text {
     color: black;
-}
-
-.article_link {
-    color: firebrick;
-    text-decoration: none;
-}
-
-.article_link:hover, .article_link:focus {
-    color: darkred;
-    text-decoration: underline;
 }
 
 #contacts_feed {
