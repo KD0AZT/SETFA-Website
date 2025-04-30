@@ -306,6 +306,10 @@ main {
     justify-content: center;
 }
 
+.helpful_link {
+    width: 40%;
+}
+
 .helpful_link a::before {
     content: "\00BB";
 }
@@ -539,6 +543,20 @@ main {
 
 .annual_report_text {
     color: black;
+}
+
+.interlocal_agreements_subtitle {
+    background-color: firebrick;
+    width: 100%;
+    padding: 0.5em 1em;
+}
+
+.interlocal_agreements_download {
+    display: list-item;
+    list-style-position: inside;
+    align-self: flex-start;
+    margin: 0.5em 1em;
+
 }
 
 .bold {
