@@ -297,7 +297,7 @@ main {
 #helpful_links_list {
     padding-left: 1em;
     list-style: none;
-    background-color: #1a1a1a;
+    background-color: #1a1a1a;  
     padding: 1em;
     flex-grow: 1;
     display: flex;
@@ -418,18 +418,27 @@ main {
     text-align: center;
 }
 
+.subpage_subtitle {
+    background-color: firebrick;
+    width: 100%;
+    padding: 0.5em 1em;
+}
+
 .subpage_text {
     color: black;
-    font-size: 125%;
-    line-height: 200%;
-    font-weight: bold;
-    margin-bottom: 2em;
 }
 
 #mission_statement_image {
     width: 85%;
     border: 5px white solid;
     box-shadow: 1px 1px 5px black;
+}
+
+#mission_statement_text {
+    font-size: 125%;
+    line-height: 200%;
+    font-weight: bold;
+    margin-bottom: 2em;
 }
 
 .commissioner {
@@ -530,12 +539,6 @@ main {
     margin-bottom: 1em;
 }
 
-.annual_report_subtitle {
-    background-color: firebrick;
-    width: 100%;
-    padding: 0.5em 1em;
-}
-
 .annual_report_download, .annual_report_text {
     align-self: flex-start;
     margin: 0.5em 1em;
@@ -545,18 +548,25 @@ main {
     color: black;
 }
 
-.interlocal_agreements_subtitle {
-    background-color: firebrick;
-    width: 100%;
-    padding: 0.5em 1em;
-}
-
 .interlocal_agreements_download {
     display: list-item;
     list-style-position: inside;
     align-self: flex-start;
     margin: 0.5em 1em;
+}
 
+.in_remembrance_image {
+    float: left;
+    margin: 1.5em;
+    border: 4px white solid;
+    box-shadow: 1px 1px 5px black;
+    width: 15em;
+}
+
+.in_remembrance_text {
+    margin-top: 1.5em;
+    padding-right: 20em;
+    font-size: 115%;
 }
 
 .bold {
