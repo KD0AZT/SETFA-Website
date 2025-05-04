@@ -428,10 +428,13 @@ main {
     color: black;
 }
 
+.subpage_image {
+    border: 4px white solid;
+    box-shadow: 1px 1px 5px black;
+}
+
 #mission_statement_image {
     width: 85%;
-    border: 5px white solid;
-    box-shadow: 1px 1px 5px black;
 }
 
 #mission_statement_text {
@@ -462,8 +465,6 @@ main {
 .commissioner_image {
     float: left;
     margin: 1em;
-    border: 4px white solid;
-    box-shadow: 1px 1px 5px black;
 }
 
 .commissioner p {
@@ -487,8 +488,6 @@ main {
 #fire_chief_image {
     float: left;
     margin: 1.5em;
-    border: 4px white solid;
-    box-shadow: 1px 1px 5px black;
 }
 
 .fire_chief_text {
@@ -558,14 +557,21 @@ main {
 .in_remembrance_image {
     float: left;
     margin: 1.5em;
-    border: 4px white solid;
-    box-shadow: 1px 1px 5px black;
     width: 15em;
 }
 
 .in_remembrance_text {
     margin-top: 1.5em;
     padding-right: 20em;
+    font-size: 115%;
+}
+
+.station_locations_image, .station_locations_text {
+    margin: 1.5em;
+}
+
+.station_locations_text {
+    align-self: flex-start;
     font-size: 115%;
 }
 
