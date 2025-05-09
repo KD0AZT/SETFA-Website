@@ -433,6 +433,14 @@ main {
     box-shadow: 1px 1px 5px black;
 }
 
+.subpage_list {
+
+}
+
+.subpage_list_item {
+    color: black;
+}
+
 #mission_statement_image {
     width: 85%;
 }
@@ -500,6 +508,16 @@ main {
 
 #fire_chief_signature {
     font-style: italic;
+}
+
+.apparatus_image {
+    width: 20em;
+    margin: 1.5em 0;
+}
+
+.apparatus_list {
+    margin-bottom: 1.5em;
+    width: 100%;
 }
 
 .news_title {
