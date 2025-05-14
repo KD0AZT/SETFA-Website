@@ -555,6 +555,11 @@ main {
     margin-bottom: 1.5em;
 }
 
+.audit_text {
+    margin: 1em 7em;
+    align-self: flex-start;
+}
+
 .news_title {
     color: firebrick;
     margin-bottom: 1em;
