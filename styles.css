@@ -513,17 +513,23 @@ main {
     margin-left: 1em;
 }
 
-#fire_chief_image {
+#fire_chief_title {
+    margin-bottom: 1.5em;
+}
+
+.fire_chief_image {
     float: left;
-    margin: 1.5em;
+    margin: 0 1.5em;
 }
 
 .fire_chief_text {
     font-weight: normal;
+    margin: 1.5em;
 }
 
 #fire_chief {
     display: block;
+    padding: 0 10em;
 }
 
 #fire_chief_signature {
@@ -631,6 +637,26 @@ main {
 .station_locations_text {
     align-self: flex-start;
     font-size: 115%;
+}
+
+.cpr-firstaid_text {
+    margin: 1.5em;
+}
+
+.cpr-firstaid_list {
+    margin: 1.5em;
+}
+
+.cpr-firstaid_list_item {
+    
+}
+
+.cpr-firstaid_image {
+    margin: 1.5em;
+}
+
+.cpr-firstaid_div {
+    width: 100%;
 }
 
 .bold {
