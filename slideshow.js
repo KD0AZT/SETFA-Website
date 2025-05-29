@@ -1,26 +1,33 @@
-let slideIndex = 0;
-let slides = [];
-slides[0] = "url(/images/working.jpeg)";
-slides[1] = "url(/images/engine.jpeg)";
-slides[2] = "url(/images/firefighters-women-2.jpg)";
-slides[3] = "url(/images/firefighters-window2-2.jpg)";
-slides[4] = "url(/images/firefighters-frontdoor-2.jpg)";
-slides[5] = "url(/images/firefighter-window-2.jpg)";
-slides[6] = "url(/images/fire-truck-2.jpg)";
-slides[7] = "url(/images/cpr-2.jpg)";
-slides[8] = "url(/images/burnt-remains-2.jpg)";
-slides[9] = "url(/images/burninghouse-side-2.jpg)";
-slides[10] = "url(/images/burning-house-2.jpg)";
-slides[11] = "url(/images/burning-door-2.jpg)";
-let i = 12;
+let slides = [
+"slideshow_slide_1",
+"slideshow_slide_2",
+"slideshow_slide_3",
+"slideshow_slide_4",
+"slideshow_slide_5",
+"slideshow_slide_6",
+"slideshow_slide_7",
+"slideshow_slide_8",
+"slideshow_slide_9",
+"slideshow_slide_10",
+"slideshow_slide_11",
+"slideshow_slide_12"];
+let i = 0;
+let delay;
 showSlides();
 
 function showSlides() {
+    let slide = slides[i];
+    let prevSlide;
+    if (i == 0) {
+       prevSlide = slides[slides.length - 1];
+    } else {
+        prevSlide = slides[i - 1];
+    }
+    document.getElementById(prevSlide).style.display = "none";
+    document.getElementById(slide).style.display = "initial";
+    i++;
     if (i > slides.length - 1) {
         i = 0;
     }
-    let slide = slides[i];
-    document.getElementById("logo_slideshow").style.backgroundImage = slide;
-    i++;
-    setTimeout(showSlides, 5000); // Change image every 5 seconds
+    setTimeout(showSlides, 7000); //Change slide every 5 seconds
 }
