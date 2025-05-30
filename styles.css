@@ -326,7 +326,7 @@ main {
 }
 
 .helpful_link {
-    width: 40%;
+    width: 100%;
 }
 
 .helpful_link a::before {
