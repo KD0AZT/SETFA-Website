@@ -156,13 +156,14 @@ body {
     align-items: center;
     justify-content: center;
     height: 65%;
-    width: 100%;
-    overflow: hidden;   
+    width: 45%;
+    overflow: hidden;
+    background: linear-gradient(90deg,rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .5) 10%,rgba(0, 0, 0, .5) 90%, rgba(0, 0, 0, 0) 100%);
 }
 
 #slideshow_slide_1, #slideshow_slide_2, #slideshow_slide_3, #slideshow_slide_4, #slideshow_slide_5, #slideshow_slide_6, #slideshow_slide_7, #slideshow_slide_8, #slideshow_slide_9, #slideshow_slide_10, #slideshow_slide_11, #slideshow_slide_12 {
     display: none;
-    width: 50%;
+    width: 85%;
     opacity: 1.0;
     animation-name: fade-in;
     animation-duration: 7s;
