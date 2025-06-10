@@ -446,11 +446,13 @@ main {
 
 .subpage_text {
     color: black;
+    margin: 1em;
 }
 
 .subpage_image {
     border: 4px white solid;
     box-shadow: 1px 1px 5px black;
+    margin: 1em;
 }
 
 .subpage_list {
