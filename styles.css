@@ -434,7 +434,7 @@ main {
 
 .subpage_title {
     color: firebrick;
-    margin: 1em;
+    /* margin: 1em; */
     text-align: center;
 }
 
