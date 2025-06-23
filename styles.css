@@ -35,7 +35,7 @@ body {
     background-color: #1a1a1a;
     width: 100%;
     padding: 0 1.5em;
-    height: 5em;
+    height: 3em;
 }
 
 .navbar *.desktop {
@@ -43,7 +43,7 @@ body {
 }
 
 .patch.desktop {
-    height: 5em;
+    height: 3em;
     padding-right: 1em;
 }
 
@@ -137,7 +137,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: calc(100vh - 5em);
+    height: calc(100vh - 3em);
     width: 100vw;
 }
 
@@ -205,7 +205,7 @@ body {
 }
 
 .emergency {
-    color: firebrick;
+    color: red;
     text-decoration: underline;
     padding-bottom: .2em;
 }
@@ -213,7 +213,7 @@ body {
 main {
     display: flex;
     flex-direction: row;
-    height: calc(66vh - 5em);
+    height: calc(66vh - 2em);
     padding: 1em 5em;
     align-items: center;
     justify-content: center;
