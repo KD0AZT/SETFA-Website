@@ -456,7 +456,7 @@ main {
 }
 
 .subpage_list {
-
+    margin: 1em;
 }
 
 .subpage_list_item {
@@ -481,6 +481,10 @@ main {
 .subpage_table_row, .subpage_table_data {
     border-bottom: 1px solid black;
     border-right: 1px solid black;
+}
+
+.subpage_div {
+    width: 100%;
 }
 
 #mission_statement_image {
