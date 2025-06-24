@@ -356,6 +356,7 @@ main {
     flex-grow: 1;
     margin-left: 2.5em;
     padding: 2em;
+    padding-bottom: 0;
     flex-basis: 75%
 }
 
@@ -392,6 +393,7 @@ main {
     padding: .3em 0;
     padding-left: 1em;
     width: 95%;
+    border-bottom: 3px darkred solid;
 }
 
 #articles {
