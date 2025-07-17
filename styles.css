@@ -566,6 +566,17 @@ main {
     font-style: italic;
 }
 
+#accessibility_title {
+    padding-bottom: 1em;
+}
+
+.accessibility_text {
+    margin: 0 3em;
+    margin-bottom: 1.5em;
+    align-self: flex-start;
+    color: black;
+}
+
 .apparatus_image {
     width: 20em;
     margin: 1.5em 0;
@@ -629,6 +640,10 @@ main {
 
 .milestone_image {
     max-width: 35%;
+    margin-bottom: 1em;
+}
+
+#annual_report_title {
     margin-bottom: 1em;
 }
 
