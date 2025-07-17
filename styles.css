@@ -84,19 +84,15 @@ body {
     display: block;
 }
 
-#navbar_inspection_menu.desktop:hover .navbar_dropdown_list, #navbar_inspection_menu.desktop:focus .navbar_dropdown_list {
+#navbar_resources_menu.desktop:hover .navbar_dropdown_list, #navbar_resources_menu.desktop:focus .navbar_dropdown_list {
+    display: block;
+}
+
+#navbar_news_menu.desktop:hover .navbar_dropdown_list, #navbar_news_menu.desktop:focus .navbar_dropdown_list {
     display: block;
 }
 
 #navbar_employment_menu.desktop:hover .navbar_dropdown_list, #navbar_employment_menu.desktop:focus .navbar_dropdown_list {
-    display: block;
-}
-
-#navbar_services_menu.desktop:hover .navbar_dropdown_list, #navbar_services_menu.desktop:focus .navbar_dropdown_list {
-    display: block;
-}
-
-#navbar_community_menu.desktop:hover .navbar_dropdown_list, #navbar_community_menu.desktop:focus .navbar_dropdown_list {
     display: block;
 }
 
