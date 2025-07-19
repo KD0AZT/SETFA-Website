@@ -349,6 +349,8 @@ main {
 
 .main_info {
     background-color: #dfd9cd;
+    border-top: .5em #dfd9cd solid;
+    border-bottom: .5em #dfd9cd solid;
     height: 95%;
     display: flex;
     flex-direction: column;
@@ -438,7 +440,7 @@ main {
 
 .subpage_title {
     color: firebrick;
-    /* margin: 1em; */
+    margin-bottom: 1em;
     text-align: center;
 }
 
@@ -513,16 +515,12 @@ main {
     margin: 0;
 }
 
-.commissioner {
-    width: 100%;
+#commissioners {
+    padding-top: 1em;
 }
 
 .commissioner * {
     color: black;
-}
-
-#commissioners_title {
-    margin-top: 0;
 }
 
 .commissioner_name {
@@ -542,11 +540,6 @@ main {
 
 .commissioner ul {
     list-style: none;
-}
-
-.community_involvement_title {
-    margin-top: 5.5em;
-    margin-left: 1em;
 }
 
 .awards_title {
@@ -570,7 +563,8 @@ main {
 
 #fire_chief {
     display: block;
-    padding: 0 10em;
+    padding-left: 10em;
+    padding-right: 10em;
 }
 
 #fire_chief_signature {
@@ -596,21 +590,6 @@ main {
 .apparatus_list {
     margin-bottom: 1.5em;
     width: 100%;
-}
-
-.finance_subtitle {
-    margin-bottom: 1.5em;
-    margin-top: .5em;
-}
-
-.finance_text {
-    margin: 0 3em;
-    margin-bottom: 1.5em;
-    align-self: flex-start;
-}
-
-.finance_image {
-    margin-bottom: 1.5em;
 }
 
 .audit_text {
@@ -667,13 +646,6 @@ main {
     color: black;
 }
 
-.interlocal_agreements_download {
-    display: list-item;
-    list-style-position: inside;
-    align-self: flex-start;
-    margin: 0.5em 1em;
-}
-
 .in_remembrance_image {
     float: left;
     margin: 1.5em;
@@ -691,26 +663,6 @@ main {
 
 .station_locations_text {
     align-self: flex-start;
-}
-
-.cpr-firstaid_text {
-    margin: 1.5em;
-}
-
-.cpr-firstaid_list {
-    margin: 1.5em;
-}
-
-.cpr-firstaid_list_item {
-    
-}
-
-.cpr-firstaid_image {
-    margin: 1.5em;
-}
-
-.cpr-firstaid_div {
-    width: 100%;
 }
 
 .bold {
