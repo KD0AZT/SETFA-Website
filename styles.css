@@ -379,7 +379,6 @@ main {
     font-weight: bold;
     text-align: center;
     color: firebrick;
-    text-decoration: none;
     padding-bottom: .5em;
     margin-bottom: .5em;
 }
@@ -501,6 +500,17 @@ main {
     line-height: 200%;
     font-weight: bold;
     margin-bottom: 2em;
+}
+
+#operations_image_link {
+    width: 75%;
+    margin: 1.5em 0;
+}
+
+#operations_image {
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 .commissioner {
