@@ -200,6 +200,10 @@ body {
     font-weight: bold;
 }
 
+.header_text {
+    color: white;
+}
+
 .emergency {
     color: red;
     text-decoration: underline;
@@ -233,6 +237,7 @@ main {
 
 #announcements_title {
     text-align: center;
+    color: white;
     text-shadow: 2px 2px black;
     background-color: #776959;
     padding: .5em;
@@ -308,6 +313,7 @@ main {
 
 #helpful_links_title {
     text-align: center;
+    color: white;
     text-shadow: 2px 2px black;
     background-color: #776959;
     padding: .5em;
@@ -389,6 +395,7 @@ main {
 }
 
 #news_title {
+    color: white;
     background-color: firebrick;
     font-size: 100%;
     margin: 0 1em;
