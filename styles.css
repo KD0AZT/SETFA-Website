@@ -16,7 +16,6 @@ html * {
 body {
     font-family: sans-serif;
     font-size: 100%;
-    color: white;
     line-height: 1.5em;
     background: #757575;
     background-image: url("images/zenbg-1.png"), url("images/zenbg-2.png");
@@ -367,7 +366,6 @@ main {
 
 .link {
     color: firebrick !important;
-    text-decoration: none !important;
 }
 
 .link:hover, .link:focus {
@@ -446,8 +444,10 @@ main {
 
 .subpage_subtitle {
     background-color: firebrick;
+    color: white;
     width: 100%;
     padding: 0.5em 1em;
+    text-align: center;
 }
 
 .subpage_text {
@@ -665,6 +665,19 @@ main {
     align-self: flex-start;
 }
 
+#address_signs {
+    display: block;
+}
+
+.address_signs_image {
+    display: block;
+    float: right;
+}
+
+.address_signs_text {
+    display: block;
+}
+
 .bold {
     font-weight: bold;
 }
@@ -873,7 +886,6 @@ footer ul li a:hover, footer ul li a:focus {
     body {
         font-family: sans-serif;
         font-size: 100%;
-        color: white;
         line-height: 1.5em;
         background: #757575;
         background-image: url("images/zenbg-1.png"), url("images/zenbg-2.png");
