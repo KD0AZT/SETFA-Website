@@ -391,7 +391,6 @@ main {
 
 #burn_ban:hover, #burn_ban:focus {
     color: darkred;
-    text-decoration: underline;
 }
 
 #news_title {
@@ -683,6 +682,18 @@ main {
 
 .address_signs_text {
     display: block;
+}
+
+#emergency_rescue {
+    align-items: flex-start;
+}
+
+.emergency_rescue_div {
+    display: flex;
+}
+
+.emergency_rescue_list_item {
+    padding-bottom: 1em;
 }
 
 .bold {
