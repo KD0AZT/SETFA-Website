@@ -852,6 +852,7 @@ main {
     color: firebrick;
     font-size: 150%;
     align-self: center;
+    margin-bottom: 0;
 }
 
 #privacy_policy h4 {
