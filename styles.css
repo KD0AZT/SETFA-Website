@@ -742,6 +742,22 @@ main {
     align-self: center;
 }
 
+#newsletters {
+    align-items: flex-start;
+}
+
+#newsletters_title {
+    align-self: center;
+}
+
+#press_releases {
+    align-items: flex-start;
+}
+
+#press_releases_title {
+    align-self: center;
+}
+
 .bold {
     font-weight: bold;
 }
