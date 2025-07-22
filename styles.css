@@ -718,6 +718,18 @@ main {
     margin-bottom: 0;
 }
 
+#wildfire_prevention {
+    align-items: flex-start;
+}
+
+#wildfire_prevention_title {
+    align-self: center;
+}
+
+.wildfire_prevention_list {
+    list-style: none;
+}
+
 .bold {
     font-weight: bold;
 }
