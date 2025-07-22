@@ -705,6 +705,19 @@ main {
     padding-bottom: 1em;
 }
 
+#unwanted_meds {
+    display: block;
+}
+
+.unwanted_meds_div {
+    margin-bottom: 1em;
+}
+
+.subpage_div .unwanted_meds_text {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 .bold {
     font-weight: bold;
 }
