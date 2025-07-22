@@ -734,6 +734,14 @@ main {
     margin-bottom: .5em;
 }
 
+#in_the_media {
+    align-items: flex-start;
+}
+
+#in_the_media_title {
+    align-self: center;
+}
+
 .bold {
     font-weight: bold;
 }
