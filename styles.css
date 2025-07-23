@@ -600,6 +600,36 @@ main {
     align-self: flex-start;
 }
 
+#burn_ban_2025 {
+    align-items: flex-start;
+}
+
+#burn_ban_2025_title {
+    align-self: center;
+}
+
+#burn_ban_2025_subtitle {
+    align-self: center;
+    text-decoration: underline;
+}
+
+#faq {
+    align-items: flex-start;
+}
+
+#faq_title{
+    align-self: center;
+}
+
+.faq_subtitle {
+    margin-bottom: .5em;
+}
+
+.faq_question {
+    padding-left:.5em;
+    font-style: italic;
+}
+
 .news_title {
     color: firebrick;
     margin-bottom: 1em;
