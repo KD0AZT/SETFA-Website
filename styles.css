@@ -357,7 +357,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
+    align-items: stretch;
     overflow: scroll;
     border-radius: 3px;
     flex-grow: 1;
@@ -466,10 +466,19 @@ main {
 
 .subpage_list {
     margin: 1em;
+    list-style: none;
 }
 
 .subpage_list_item {
     color: black;
+}
+
+.subpage_ordered_list {
+
+}
+
+.subpage_ordered_list_item {
+
 }
 
 .subpage_table {
@@ -539,10 +548,6 @@ main {
 
 .commissioner p {
     margin: 1em;
-}
-
-.commissioner ul {
-    list-style: none;
 }
 
 .awards_title {
@@ -786,6 +791,26 @@ main {
 
 #press_releases_title {
     align-self: center;
+}
+
+#career {
+    align-items: flex-start;
+}
+
+#career_title {
+    align-self: center;
+}
+
+.career_subtitle {
+    align-self: center;
+}
+
+.career_list {
+    padding: 0;
+}
+
+.career_ordered_list {
+    margin-bottom: 1em;
 }
 
 .bold {
