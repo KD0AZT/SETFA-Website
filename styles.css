@@ -813,6 +813,10 @@ main {
     margin-bottom: 1em;
 }
 
+#volunteer {
+    display: block;
+}
+
 .bold {
     font-weight: bold;
 }
