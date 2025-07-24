@@ -695,6 +695,11 @@ main {
     padding-right: 15em;
 }
 
+.meetings_subtitle {
+    background: none;
+    color: black;
+}
+
 .station_locations_image, .station_locations_text {
     margin: 1.5em;
 }
@@ -819,6 +824,10 @@ main {
 
 .bold {
     font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
 }
 
 @media (min-width: 1500px) {
