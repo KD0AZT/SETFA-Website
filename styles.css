@@ -695,13 +695,13 @@ main {
     padding-right: 15em;
 }
 
-.meetings_subtitle {
-    background: none;
-    color: black;
-}
-
 .meetings_list {
     margin-top: 0;
+}
+
+#meetings hr {
+    border-style: solid;
+    color: rgb(175,175,175);
 }
 
 .station_locations_image, .station_locations_text {
