@@ -649,6 +649,14 @@ main {
     line-height: 1.5em;
 }
 
+.news_subtitle {
+    background-color: firebrick;
+    color: white;
+    width: 100%;
+    padding: 0.5em 1em;
+    text-align: center;
+}
+
 #milestone_list {
     align-self: flex-start;
     padding-bottom: 1em;
