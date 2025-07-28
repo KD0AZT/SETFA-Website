@@ -638,6 +638,7 @@ main {
 .news_title {
     color: firebrick;
     margin-bottom: 1em;
+    align-self: center;
 }
 
 .news_text {
@@ -652,26 +653,40 @@ main {
 .news_subtitle {
     background-color: firebrick;
     color: white;
-    width: 100%;
     padding: 0.5em 1em;
     text-align: center;
+    margin-bottom: .5em;
 }
 
-#milestone_list {
-    align-self: flex-start;
-    padding-bottom: 1em;
+.news_list {
+    margin-bottom: .5em;
 }
 
 .news_list_item {
     color: #1a1a1a;
     margin-left: 3em;
     font-size: 100%;
+    list-style: disc;
+    margin-bottom: .5em;
+}
+
+.news_ordered_list_item {
+    margin-bottom: .5em;
+}
+
+#backyard_fire_safety ol * {
+    padding-left: 0;
 }
 
 .news_image {
     width: 100%;
     border: 3px white solid;
     box-shadow: 1px 1px 5px #1a1a1a;
+}
+
+#milestone_list {
+    align-self: flex-start;
+    padding-bottom: 1em;
 }
 
 .milestone_image {
