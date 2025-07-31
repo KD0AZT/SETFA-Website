@@ -864,10 +864,6 @@ main {
     }
 }
 
-.article_title {
-    font-weight: bold;
-}
-
 .article_date {
     color: grey;
     font-size: 75%;
