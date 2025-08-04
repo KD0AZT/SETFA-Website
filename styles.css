@@ -801,6 +801,10 @@ main {
     margin-bottom: .5em;
 }
 
+#hiring_2025 a {
+    padding-bottom: 1em;
+}
+
 #in_the_media {
     align-items: flex-start;
 }
