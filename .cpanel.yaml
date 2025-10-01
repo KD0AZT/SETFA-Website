@@ -2,4 +2,30 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home1/pearlte7/public_html/
-    - /bin/cp -R / $DEPLOYPATH
+    - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp .cpanel.yaml $DEPLOYPATH
+    - /bin/cp android-chrome-192x192.png $DEPLOYPATH
+    - /bin/cp android-chrome-512x512.png $DEPLOYPATH
+    - /bin/cp apple-touch-icon.png $DEPLOYPATH
+    - /bin/cp contact.html $DEPLOYPATH
+    - /bin/cp favicon-16x16.png $DEPLOYPATH
+    - /bin/cp favicon-32x32.png $DEPLOYPATH
+    - /bin/cp favicon.ico $DEPLOYPATH
+    - /bin/cp footer.html $DEPLOYPATH
+    - /bin/cp header.html $DEPLOYPATH
+    - /bin/cp html_include.js $DEPLOYPATH
+    - /bin/cp mobile_menu.js $DEPLOYPATH
+    - /bin/cp navbar.html $DEPLOYPATH
+    - /bin/cp privacy.html $DEPLOYPATH
+    - /bin/cp sidebar.html $DEPLOYPATH
+    - /bin/cp site.webmanifest $DEPLOYPATH
+    - /bin/cp slideshow.js $DEPLOYPATH
+    - /bin/cp styles.css $DEPLOYPATH
+    - /bin/cp -R about/ $DEPLOYPATH
+    - /bin/cp -R articles/ $DEPLOYPATH
+    - /bin/cp -R downloads/ $DEPLOYPATH
+    - /bin/cp -R images/ $DEPLOYPATH
+    - /bin/cp -R join/ $DEPLOYPATH
+    - /bin/cp -R news/ $DEPLOYPATH
+    - /bin/cp -R recent_news/ $DEPLOYPATH
+    - /bin/cp -R resources/ $DEPLOYPATH
