@@ -439,6 +439,11 @@ main {
     border-radius: 3px;
 }
 
+.page_buttons {
+    display: flex;
+    flex-direction: column;
+}
+
 .subpage_title {
     color: firebrick;
     margin-bottom: 1em;
