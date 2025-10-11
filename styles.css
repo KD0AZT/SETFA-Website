@@ -440,8 +440,10 @@ main {
 }
 
 .page_buttons {
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    margin-top: auto;
 }
 
 .subpage_title {
