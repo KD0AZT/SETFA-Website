@@ -828,6 +828,10 @@ main {
     align-self: center;
 }
 
+.newsletter_link {
+    padding: 1em;
+}
+
 #press_releases {
     align-items: flex-start;
 }
