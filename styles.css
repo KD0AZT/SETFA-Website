@@ -1100,6 +1100,8 @@ footer ul li a:hover, footer ul li a:focus {
     .title {
         text-align: center;
         font-size: 125%;
+        color: white;
+        text-shadow: 3px 3px black;
     }
     
     .nav_button.mobile {
@@ -1128,6 +1130,7 @@ footer ul li a:hover, footer ul li a:focus {
     
     .nav_header.mobile {
         padding: .5em;
+        color: firebrick;
     }
 
     .nav_header_first.mobile {
@@ -1155,7 +1158,7 @@ footer ul li a:hover, footer ul li a:focus {
         height: 10em;
     }
 
-    .logo_slideshow {
+    #logo_slideshow {
         display: none;
     }
 
