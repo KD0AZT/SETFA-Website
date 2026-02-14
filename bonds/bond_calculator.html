@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>SETFA Bond Reference Tool</title>
+    <style>
+        :root {
+            --bg: #000000;
+            --card: #1a1a1a;
+            --muted: #cccccc;
+            --accent: #ffffff;
+            --border: #555555;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--accent);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+
+        header {
+            padding: 24px 16px;
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+        }
+
+        header a {
+            margin-right: 5%
+        }
+
+        header a img {
+            max-height: 5em;
+        }
+
+        header h1 {
+            margin: 0 0 6px;
+            font-size: 1.4rem;
+            color: var(--accent);
+        }
+
+        header p {
+            margin: 0;
+            color: var(--muted);
+            font-size: .95rem
+        }
+
+        .wrap {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 16px;
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid #333;
+            border-radius: 14px;
+            padding: 18px;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 14px;
+        }
+
+        .field {
+            flex: 1 1 260px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        label {
+            font-weight: 600;
+            font-size: .95rem;
+            color: var(--accent);
+        }
+
+        input {
+            background: #000;
+            border: 1px solid var(--border);
+            color: var(--accent);
+            border-radius: 10px;
+            padding: 12px 14px;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #ffffff;
+            box-shadow: 0 0 0 4px rgba(255, 255, 255, .15)
+        }
+
+        .out {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-top: 8px;
+        }
+
+        .pill {
+            flex: 1 1 220px;
+            background: #000;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 14px;
+        }
+
+        .pill h3 {
+            margin: 0;
+            font-size: .95rem;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .pill small {
+            display: block;
+            margin-top: 4px;
+            color: var(--muted);
+            font-size: .8rem;
+        }
+
+        .pill p {
+            margin: 10px 0 0;
+            font-size: 1.5rem;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .hint {
+            color: var(--muted);
+            font-size: .9rem;
+            line-height: 1.4;
+        }
+
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .btn {
+            border: 1px solid #ffffff;
+            background: #ffffff;
+            color: #000000;
+            border-radius: 999px;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-size: .95rem;
+        }
+
+        .btn:hover {
+            background: #f1f1f1;
+        }
+
+        footer {
+            color: #888;
+            font-size: .85rem;
+            text-align: center;
+            padding: 16px;
+            margin-top: auto;
+        }
+
+        .rateBox {
+            background: #000;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 12px 14px;
+        }
+
+        .rateValue {
+            font-weight: 700;
+            font-variant-numeric: tabular-nums;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="/index.html"><img src="/images/featured-image.svg"></a>
+        <div>
+            <h1>SE Thurston Fire Authority Bond Reference Tool</h1>
+            <p>Providing general perspective on how the proposed bond rate applies to assessed property value.</p>
+        </div>
+    </header>
+    <div class="wrap">
+        <div class="card">
+            <div class="row">
+                <div class="field">
+                    <label for="val">Assessed Property Value (USD)</label>
+                    <input id="val" type="number" min="0" step="1000" placeholder="e.g., 400000" inputmode="decimal">
+                    <div class="grid" id="quick">
+                        <button class="btn" data-v="250000">$250k</button>
+                        <button class="btn" data-v="300000">$300k</button>
+                        <button class="btn" data-v="350000">$350k</button>
+                        <button class="btn" data-v="400000">$400k</button>
+                        <button class="btn" data-v="450000">$450k</button>
+                        <button class="btn" data-v="500000">$500k</button>
+                        <button class="btn" data-v="600000">$600k</button>
+                        <button class="btn" data-v="700000">$700k</button>
+                        <button class="btn" data-v="800000">$800k</button>
+                        <button class="btn" data-v="900000">$900k</button>
+                        <button class="btn" data-v="1000000">$1.0M</button>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label>Proposed Bond Rate</label>
+                    <div class="rateBox">
+                        <div class="rateValue">0.22 per $1,000 of assessed value</div>
+                        <div class="hint">Rate is fixed based on the proposed bond measure.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="out">
+                <div class="pill">
+                    <h3>Estimated Annual Total</h3>
+                    <small>Total estimated amount over one year.</small>
+                    <p id="annual">$0.00</p>
+                </div>
+                <div class="pill">
+                    <h3>Monthly Equivalent</h3>
+                    <small>The same annual total shown as a monthly breakdown.</small>
+                    <p id="monthly">$0.00</p>
+                </div>
+            </div>
+
+            <div class="hint" style="margin-top:18px;">
+                This calculator is provided as a reference tool to help understand how the proposed bond rate is applied
+                to assessed property value. Figures shown are approximate. Final amounts are determined by Thurston
+                County based on the property’s official assessed value.
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 SE Thurston Fire Authority — Public Information Tool
+    </footer>
+
+    <script>
+        (function () {
+            const FIXED_RATE = 0.22;
+            const val = document.getElementById('val');
+            const annual = document.getElementById('annual');
+            const monthly = document.getElementById('monthly');
+            const quick = document.getElementById('quick');
+
+            function fmt(n) {
+                return n.toLocaleString(undefined, { style: 'currency', currency: 'USD', maximumFractionDigits: 2 });
+            }
+
+            function calc() {
+                const v = parseFloat(val.value || 0);
+                if (v <= 0) {
+                    annual.textContent = '$0.00';
+                    monthly.textContent = '$0.00';
+                    return;
+                }
+                const units = v / 1000;
+                const annualCost = units * FIXED_RATE;
+                const monthlyCost = annualCost / 12;
+                annual.textContent = fmt(annualCost);
+                monthly.textContent = fmt(monthlyCost);
+            }
+
+            val.addEventListener('input', calc);
+            quick.addEventListener('click', (e) => {
+                const b = e.target.closest('button[data-v]');
+                if (!b) return;
+                val.value = b.getAttribute('data-v');
+                calc();
+            });
+
+            val.value = 400000;
+            calc();
+        })();
+    </script>
+</body>
+
+</html>

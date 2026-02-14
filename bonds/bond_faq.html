@@ -1,0 +1,838 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>SE Thurston Fire Authority — Bond FAQs</title>
+    <style>
+        :root {
+            --bg: #1F1A1C;
+            --card: #141214;
+            --panel: #171417;
+            --text: #ffffff;
+            --muted: #d0d0d0;
+            --border: #2b2629;
+            --chip: #050505;
+            --focus: rgba(255, 255, 255, .16);
+            --shadow1: 0 14px 34px rgba(0, 0, 0, .55);
+            --shadow2: 0 2px 0 rgba(255, 255, 255, .04) inset;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            background: #1a1a1a;
+            color: var(--text);
+            font-family: system-ui, -apple-system, Segoe UI, Inter, Roboto, Arial, sans-serif;
+            line-height: 1.45;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        a {
+            color: #c7d2fe
+        }
+
+        header {
+            padding: 28px 0 18px;
+        }
+
+        .brandRow {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 18px;
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        .brandRow a {
+            height: 7em;
+        }
+
+        .logoLeft {
+            width: 140px;
+            height: 100%;
+        }
+
+        .brandText {
+            text-align: left;
+        }
+
+        .agency {
+            font-weight: 900;
+            letter-spacing: 1.4px;
+            font-size: .9rem;
+            margin-bottom: 6px;
+        }
+
+        header h1 {
+            margin: 0 0 6px;
+            font-size: 1.7rem;
+            letter-spacing: .2px
+        }
+
+        header p {
+            margin: 0;
+            color: var(--muted);
+            font-size: .98rem
+        }
+
+        .wrap {
+            width: 95%;
+            padding: 14px 16px 28px;
+        }
+
+        .topbar {
+            background: linear-gradient(180deg, #1b171a 0%, #131113 100%);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 16px;
+            box-shadow: var(--shadow1);
+        }
+
+        .searchRow {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .search {
+            position: relative;
+            flex: 1 1 520px;
+            min-width: 260px;
+        }
+
+        .search input {
+            width: 100%;
+            background: #000;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 14px 44px 14px 44px;
+            font-size: 1rem;
+            color: var(--text);
+            outline: none;
+        }
+
+        .search input:focus {
+            box-shadow: 0 0 0 4px var(--focus);
+            border-color: #3a3a3a;
+        }
+
+        .icon {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 18px;
+            height: 18px;
+            opacity: .85;
+            fill: var(--muted);
+        }
+
+        .icon.left {
+            left: 14px
+        }
+
+        .icon.right {
+            right: 14px;
+            cursor: pointer;
+            opacity: .75
+        }
+
+        .icon.right:hover {
+            opacity: 1
+        }
+
+        .chips {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .chip {
+            border: 1px solid var(--border);
+            background: var(--chip);
+            color: var(--muted);
+            padding: 7px 10px;
+            border-radius: 999px;
+            font-size: .9rem;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .chip:hover {
+            border-color: #3f383c;
+            color: #fff
+        }
+
+        .hint {
+            margin-top: 10px;
+            color: var(--muted);
+            font-size: .92rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 14px;
+            margin-top: 14px;
+        }
+
+        @media(min-width:960px) {
+            .grid {
+                grid-template-columns: 1fr 420px;
+                align-items: start;
+            }
+        }
+
+        .card {
+            background: linear-gradient(180deg, #1d181b 0%, #121012 100%);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 16px;
+            box-shadow: var(--shadow1), var(--shadow2);
+        }
+
+        .panelTitle {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 12px;
+            margin: 0 0 10px;
+        }
+
+        .panelTitle h2 {
+            margin: 0;
+            font-size: 1.05rem
+        }
+
+        .panelTitle span {
+            color: var(--muted);
+            font-size: .9rem
+        }
+
+        /* Categories */
+        .cat {
+            margin: 14px 0 8px;
+            padding: 10px 12px;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            background: linear-gradient(180deg, #0f0e10 0%, #0a090a 100%);
+        }
+
+        .catTitle {
+            font-weight: 900;
+            letter-spacing: .3px;
+        }
+
+        .catMeta {
+            color: var(--muted);
+            font-size: .9rem;
+            margin-top: 4px;
+        }
+
+        /* FAQ list */
+        details {
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 12px 14px;
+            background: linear-gradient(180deg, #0b0a0b 0%, #070607 100%);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, .28);
+        }
+
+        details+details {
+            margin-top: 10px
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: 800
+        }
+
+        .ans {
+            margin-top: 8px;
+            color: #e8e8e8;
+            white-space: pre-line;
+        }
+
+        .subtle {
+            color: var(--muted);
+            font-size: .9rem;
+        }
+
+        /* Results */
+        .results {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .result {
+            border: 1px solid var(--border);
+            background: linear-gradient(180deg, #0b0a0b 0%, #070607 100%);
+            border-radius: 14px;
+            padding: 12px;
+            cursor: pointer;
+            box-shadow: 0 8px 18px rgba(0, 0, 0, .35);
+            transition: transform .12s ease, border-color .12s ease, box-shadow .12s ease;
+        }
+
+        .result:hover {
+            border-color: #3f383c;
+            transform: translateY(-1px);
+            box-shadow: 0 12px 26px rgba(0, 0, 0, .45)
+        }
+
+        .result .q {
+            margin: 0 0 6px;
+            font-weight: 900
+        }
+
+        .result .a {
+            margin: 0;
+            color: #e8e8e8
+        }
+
+        .result .meta {
+            margin-top: 8px;
+            color: var(--muted);
+            font-size: .85rem
+        }
+
+        .drawer {
+            margin-top: 12px;
+            border: 1px solid var(--border);
+            background: linear-gradient(180deg, #0d0c0d 0%, #080708 100%);
+            border-radius: 16px;
+            padding: 14px;
+            display: none;
+            box-shadow: 0 14px 34px rgba(0, 0, 0, .55);
+        }
+
+        .drawerHeader {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            align-items: flex-start;
+        }
+
+        .drawerHeader .dq {
+            font-weight: 900;
+            font-size: 1.02rem
+        }
+
+        .xbtn {
+            border: 1px solid var(--border);
+            background: #000;
+            color: #fff;
+            border-radius: 10px;
+            padding: 6px 10px;
+            cursor: pointer;
+            font-weight: 900;
+        }
+
+        .xbtn:hover {
+            border-color: #3f383c
+        }
+
+        .drawerBody {
+            margin-top: 10px;
+            color: #eaeaea;
+            white-space: pre-line;
+        }
+
+        /* Submit */
+        label {
+            display: block;
+            font-weight: 900;
+            margin: 12px 0 6px
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            background: #000;
+            border: 1px solid var(--border);
+            color: #fff;
+            border-radius: 14px;
+            padding: 12px;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        textarea {
+            min-height: 96px;
+            resize: vertical
+        }
+
+        input:focus,
+        textarea:focus {
+            box-shadow: 0 0 0 4px var(--focus);
+            border-color: #3a3a3a;
+        }
+
+        .btnRow {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 12px
+        }
+
+        .btn {
+            border: 1px solid #fff;
+            background: #fff;
+            color: #000;
+            border-radius: 999px;
+            padding: 10px 14px;
+            font-weight: 900;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #f2f2f2
+        }
+
+        .status {
+            color: var(--muted);
+            font-size: .9rem;
+            display: none
+        }
+
+        footer {
+            text-align: center;
+            color: #9a9a9a;
+            font-size: .9rem;
+            padding: 18px 16px 26px;
+            margin-top: auto;
+        }
+
+        .sticky {
+            position: static;
+        }
+
+        @media(min-width:960px) {
+            .sticky {
+                position: sticky;
+                top: 14px;
+            }
+        }
+
+        .errorBar {
+            display: none;
+            margin-top: 10px;
+            border: 1px solid #5b2a2a;
+            background: #1a0f0f;
+            color: #ffd7d7;
+            border-radius: 14px;
+            padding: 10px;
+            font-size: .9rem
+        }
+
+        /* Category accordion */
+        details.catDetails {
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            background: linear-gradient(180deg, #0f0e10 0%, #0a090a 100%);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, .35);
+            overflow: hidden;
+            margin: 14px 0;
+        }
+
+        summary.catSummary {
+            list-style: none;
+            cursor: pointer;
+            padding: 12px 14px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 12px;
+            font-weight: 900;
+        }
+
+        summary.catSummary::-webkit-details-marker {
+            display: none;
+        }
+
+        .catSummaryLeft {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .catChevron {
+            color: var(--muted);
+            font-weight: 900;
+        }
+
+        .catInner {
+            padding: 10px 12px 14px;
+        }
+
+        /* Nested question details within category */
+        details.qDetails {
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 12px 14px;
+            background: linear-gradient(180deg, #0b0a0b 0%, #070607 100%);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, .28);
+        }
+
+        details.qDetails+details.qDetails {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="brandRow">
+            <a href="/index.html"><img src="/images/featured-image.svg" alt="SE Thurston Fire Authority Logo" class="logoLeft"></a>
+            <div class="brandText">
+                <div class="agency">SE THURSTON FIRE AUTHORITY</div>
+                <h1>Bond FAQs</h1>
+                <p>Search or browse questions below. Suggested matches appear on the right. Click a suggestion to jump
+                    to the full answer.</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="wrap">
+        <section class="topbar">
+            <div class="searchRow">
+                <div class="search" aria-label="FAQ Search">
+                    <svg class="icon left" viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M10 2a8 8 0 105.293 14.293l4.207 4.207 1.414-1.414-4.207-4.207A8 8 0 0010 2zm0 2a6 6 0 110 12A6 6 0 0110 4z" />
+                    </svg>
+                    <input id="query" type="search"
+                        placeholder="Search FAQs… (e.g., cost, levy, stations, engines, term, staffing)"
+                        autocomplete="off">
+                    <svg id="clearIcon" class="icon right" viewBox="0 0 24 24" aria-hidden="true" title="Clear search"
+                        style="display:none">
+                        <path
+                            d="M18.3 5.71 12 12l6.3 6.29-1.41 1.42L10.59 13.4 4.29 19.71 2.88 18.29 9.17 12 2.88 5.71 4.29 4.29l6.3 6.31 6.3-6.31z" />
+                    </svg>
+                </div>
+            </div>
+
+            <div class="chips" aria-label="Suggested searches">
+                <div class="chip" data-q="cost assessed value">Cost examples</div>
+                <div class="chip" data-q="25 year term">Bond term</div>
+                <div class="chip" data-q="what does the bond fund">What it funds</div>
+                <div class="chip" data-q="staffing wages benefits">Staffing / wages</div>
+                <div class="chip" data-q="levy versus bond">Levy vs bond</div>
+                <div class="chip" data-q="if the bond fails">If it fails</div>
+                <div class="chip" data-q="previous bonds 1990 2025">Bond history</div>
+            </div>
+
+            <div class="hint">Tip: Type a few words and choose the best match. If you don’t see your question, submit it
+                using the form on the right.</div>
+            <div class="errorBar" id="errorBar"></div>
+        </section>
+
+        <section class="grid">
+            <main class="card" aria-label="Full FAQ List">
+                <div class="panelTitle">
+                    <h2>All FAQs</h2>
+                    <span class="subtle">Click any question to expand.</span>
+                </div>
+                <div id="faqList"></div>
+            </main>
+
+            <aside class="card sticky" aria-label="Search Results and Submit Question">
+                <div class="panelTitle">
+                    <h2>Suggested matches</h2>
+                    <span id="matchCount">Type to search</span>
+                </div>
+
+                <div id="results" class="results"></div>
+
+                <div id="drawer" class="drawer" role="region" aria-label="Selected Answer">
+                    <div class="drawerHeader">
+                        <div class="dq" id="drawerQ"></div>
+                        <button class="xbtn" id="drawerClose" type="button" aria-label="Close answer">×</button>
+                    </div>
+                    <div class="drawerBody" id="drawerA"></div>
+                </div>
+
+                <div style="height:14px"></div>
+                <div class="subtle">Have a question you can’t find? Submit it below.</div>
+
+                <label for="submitQ">Your question</label>
+                <textarea id="submitQ" placeholder="Type your question here…"></textarea>
+
+                <label for="submitEmail">Your email</label>
+                <input id="submitEmail" type="text" placeholder="you@example.com">
+
+                <div class="btnRow">
+                    <button class="btn" id="sendBtn" type="button">Submit Question</button>
+                    <span class="status" id="sendStatus">Opening your email app…</span>
+                </div>
+
+                <div class="subtle" style="margin-top:12px">
+                    Contact: <a href="mailto:info@setfa.org">info@setfa.org</a> · (360) 458-2799
+                </div>
+            </aside>
+        </section>
+    </div>
+
+    <footer>© 2026 SE Thurston Fire Authority</footer>
+
+    <script id="faqData"
+        type="application/json" src="/bonds/bond_faq.json">[{"cat": "Funding & Financial Transparency", "q": "1) What is being proposed in this bond?", "a": "The bond would fund replacement of three aging fire engines and renovations to four existing fire stations in Yelm, Lake Lawrence, Rainier, and McIntosh Ridge. No new stations are included in this proposal."}, {"cat": "Funding & Financial Transparency", "q": "2) How much would this bond cost property owners?", "a": "The proposed rate is $0.22 per $1,000 of assessed value.\n\nExamples (approximate):\n• $400,000 assessed value ≈ $88 per year (~$7.33/month)\n• $500,000 assessed value ≈ $110 per year (~$9.17/month)\n• $600,000 assessed value ≈ $132 per year (~$11.00/month)\n\nFigures are provided for perspective. Final amounts are determined by Thurston County based on the property’s official assessed value."}, {"cat": "Funding & Financial Transparency", "q": "3) How long would the bond last?", "a": "The bond would be structured as a 25-year repayment term. Once the bond is fully repaid, the assessment ends (unless voters approve a future measure)."}, {"cat": "Funding & Financial Transparency", "q": "4) Can bond funds be used for staffing, wages, or benefits?", "a": "No. Bond proceeds are legally restricted to capital purposes such as buildings and major apparatus. Bond funds cannot be used for employee wages, benefits, or day-to-day operational costs.\n\nDaily operations—including staffing—are funded through the voter-approved fire levy and the annual operating budget."}, {"cat": "Funding & Financial Transparency", "q": "5) What is the difference between the fire levy and a bond?", "a": "The fire levy funds daily operations such as staffing, training, fuel, utilities, medical supplies, and routine maintenance.\n\nA bond is voter-approved financing used for long-term capital investments like fire stations and major apparatus. The two funding sources have different legal purposes and are managed separately."}, {"cat": "Funding & Financial Transparency", "q": "6) Have there been previous bonds for SETFA facilities or apparatus?", "a": "Historically, the Fire Authority has relied primarily on the operating budget (levy-funded general fund) to cover capital needs.\n\nAround 1990, a Commissioner GO bond was used to build the current Station 21. Since then, there have not been large capital bond initiatives brought forward to voters for broad station and apparatus improvements until the more recent financing actions described below."}, {"cat": "Funding & Financial Transparency", "q": "7) What was the 2025 Commissioner bond, and how does it relate to this proposal?", "a": "In 2025, the Board of Fire Commissioners approved a limited bond for essential apparatus purchases that could not reasonably be absorbed within the annual operating budget.\n\nThe intent with the proposed 2026 bond is to incorporate and pay off that existing obligation so the community is not carrying multiple overlapping capital debt instruments."}, {"cat": "Funding & Financial Transparency", "q": "8) Why weren’t these engines and station upgrades paid for through the general operating budget?", "a": "SETFA has historically managed many capital purchases through the operating budget, but the current needs are larger in scale: multiple station renovations plus major apparatus replacement.\n\nThe cost of these combined capital projects exceeds what can realistically be funded through annual operations without impacting day-to-day emergency services."}, {"cat": "Funding & Financial Transparency", "q": "9) Has SETFA managed its finances responsibly?", "a": "SETFA operates under an adopted annual budget and undergoes independent financial and accountability review through state audit processes.\n\nAs with any organization, individual line items may fluctuate year to year, but the agency’s overall financial practices are designed to remain balanced, compliant, and transparent."}, {"cat": "Apparatus & Equipment", "q": "10) Why do the fire engines need to be replaced?", "a": "Three engines are 34, 29, and 21 years old. As apparatus ages, maintenance costs tend to increase, parts can become harder to source, and reliability can decline.\n\nReplacing aging engines supports dependable response capability and reduces the risk of mechanical failure during emergencies."}, {"cat": "Apparatus & Equipment", "q": "11) Why can’t the current stations fit new fire engines?", "a": "Modern fire engines are often larger due to updated safety requirements, equipment capacity, and operational design. Some existing apparatus bays were built for smaller, older-generation rigs.\n\nWhen bays are undersized, it can limit what apparatus can be housed, serviced, and protected from weather—especially for high-value equipment funded by taxpayers."}, {"cat": "Facilities & Station Improvements", "q": "12) Which stations are included and why these locations?", "a": "The stations identified for renovation are in Yelm (Station 21), Lake Lawrence (Station 22), Rainier (Station 24), and McIntosh Ridge (Station 25).\n\nThese locations were prioritized through the Capital Facilities Plan based on coverage needs, facility condition, code requirements, and operational constraints that affect service delivery."}, {"cat": "Facilities & Station Improvements", "q": "13) What types of improvements are planned for stations?", "a": "Examples of proposed improvements include:\n• Bringing buildings up to code for ADA access and seismic safety\n• Expanding apparatus bays to accommodate modern apparatus\n• Relocating or adding sleeping quarters closer to apparatus bays to reduce turnout delays\n• Adding diesel exhaust removal systems\n• Improving decontamination areas to reduce exposure to carcinogens\n\nThe goal is to modernize existing stations so they function safely and efficiently for today’s service demands."}, {"cat": "Facilities & Station Improvements", "q": "14) Why are firefighter health and safety upgrades part of a facilities bond?", "a": "Firefighters are exposed to carcinogens and other hazardous materials in the course of emergency response. Station design plays a key role in reducing ongoing exposure.\n\nUpgrades such as diesel exhaust capture/removal and improved decontamination areas help limit contaminants in living and work spaces, supporting long-term health and safety."}, {"cat": "Facilities & Station Improvements", "q": "15) How will station changes improve emergency response?", "a": "Station layouts can affect turnout time—the time it takes firefighters to go from quarters to the apparatus after dispatch.\n\nWhere sleeping quarters are separated from apparatus bays, turnout can be delayed (and delays can be worse during icy conditions). Renovations that place quarters and support areas closer to apparatus bays can reduce those avoidable delays and support more consistent response performance."}, {"cat": "Facilities & Station Improvements", "q": "16) Will these station improvements lower homeowner insurance premiums?", "a": "Fire protection capability and coverage can influence community fire protection ratings, which may be one factor insurers consider when pricing policies.\n\nHowever, insurance premiums are set by private carriers using their own criteria, so SETFA cannot guarantee individual premium changes. The intent is to strengthen fire protection capability across the district."}, {"cat": "Facilities & Station Improvements", "q": "17) Why renovate instead of building new stations?", "a": "Where feasible, renovating existing facilities is typically more cost-effective than building new stations from the ground up.\n\nThis proposal focuses on improving the stations already in place. Renovating four stations is projected to cost less than constructing a single new station, while addressing the highest-priority deficiencies."}, {"cat": "Growth, Service Demand & Planning", "q": "18) Why is this being proposed now?", "a": "SETFA has experienced approximately 30% call growth over four years. At the same time, facility and apparatus needs have continued to mature.\n\nDelaying major capital projects can increase risk, extend reliance on aging equipment, and often increases overall cost due to construction and apparatus price escalation."}, {"cat": "Growth, Service Demand & Planning", "q": "19) What happens if the bond does not pass?", "a": "SETFA would continue operating within existing facilities and fleet capacity. Aging engines would require continued maintenance, and current station constraints would remain.\n\nMajor improvements would likely be delayed or reduced in scope, which can affect long-term reliability and operational efficiency."}, {"cat": "Growth, Service Demand & Planning", "q": "20) Is this bond tied to staffing increases?", "a": "No. This bond is for capital projects—stations and major apparatus—and cannot be used for staffing, wages, or benefits. Staffing and wages are part of the annual operating budget funded by the fire levy.\n\nBy funding major capital needs through a bond (instead of trying to absorb them into the operating budget), the Fire Authority can keep the day-to-day operating budget focused on normal emergency services and ongoing operational costs."}, {"cat": "Growth, Service Demand & Planning", "q": "21) Will there be future bonds?", "a": "Future capital needs will be evaluated through the Strategic Plan and Capital Facilities Plan as the community grows.\n\nIt is reasonable to expect that additional infrastructure may be considered over time (for example, as master-planned communities develop). Any future bond would require voter approval. This proposal is focused on the needs identified now."}, {"cat": "Governance & Oversight", "q": "22) Who decides how bond funds are spent and can the money be redirected later?", "a": "SETFA is governed by the Board of Fire Commissioners, which approves expenditures consistent with the adopted Capital Facilities Plan and the voter-approved bond purposes.\n\nBond proceeds are restricted to the approved capital uses. They cannot be redirected to unrelated purposes outside the bond’s authorized scope."}]</script>
+    <script>
+        (function () {
+            const errorBar = document.getElementById('errorBar');
+            function showError(msg) { errorBar.style.display = 'block'; errorBar.textContent = msg; }
+
+            let faqs = [];
+            try {
+                faqs = JSON.parse(document.getElementById("faqData").textContent);
+            } catch (err) {
+                showError("Could not load FAQ data: " + err.message);
+            }
+
+            // Build category grouping for the full list
+            const faqList = document.getElementById("faqList");
+            function renderAllFAQs() {
+                faqList.innerHTML = "";
+                if (!faqs.length) {
+                    faqList.innerHTML = '<div class="subtle">No FAQs loaded.</div>';
+                    return;
+                }
+
+                // group by category
+                const groups = new Map();
+                faqs.forEach(x => {
+                    const c = x.cat || "FAQs";
+                    if (!groups.has(c)) groups.set(c, []);
+                    groups.get(c).push(x);
+                });
+
+                // Category accordions (details) containing question accordions
+                for (const [cat, items] of groups.entries()) {
+                    const catDetails = document.createElement("details");
+                    catDetails.className = "catDetails";
+                    catDetails.open = false; // categories start collapsed
+
+                    const catSummary = document.createElement("summary");
+                    catSummary.className = "catSummary";
+
+                    const left = document.createElement("div");
+                    left.className = "catSummaryLeft";
+                    const title = document.createElement("div");
+                    title.className = "catTitle";
+                    title.textContent = cat;
+                    const meta = document.createElement("div");
+                    meta.className = "catMeta";
+                    meta.textContent = `${items.length} questions`;
+                    left.appendChild(title);
+                    left.appendChild(meta);
+
+                    const right = document.createElement("div");
+                    right.className = "catChevron";
+                    right.textContent = "▾";
+
+                    catSummary.appendChild(left);
+                    catSummary.appendChild(right);
+                    catDetails.appendChild(catSummary);
+
+                    const inner = document.createElement("div");
+                    inner.className = "catInner";
+
+                    items.forEach(item => {
+                        const d = document.createElement("details");
+                        d.className = "qDetails";
+                        const s = document.createElement("summary");
+                        s.textContent = item.q;
+
+                        const a = document.createElement("div");
+                        a.className = "ans";
+                        a.textContent = item.a;
+
+                        d.appendChild(s);
+                        d.appendChild(a);
+                        inner.appendChild(d);
+                    });
+
+                    catDetails.appendChild(inner);
+                    faqList.appendChild(catDetails);
+                }
+
+                // Rotate chevron based on open state
+                faqList.querySelectorAll("details.catDetails").forEach(d => {
+                    const chev = d.querySelector(".catChevron");
+                    const sync = () => { if (chev) chev.textContent = d.open ? "▾" : "▸"; };
+                    d.addEventListener("toggle", sync);
+                    sync();
+                });
+            }
+            renderAllFAQs();
+
+            // Search scoring
+            function normalize(s) {
+                return (s || "").toLowerCase().trim();
+            }
+            function tokenize(s) {
+                return normalize(s).replace(/[^a-z0-9\s]/g, ' ').split(/\s+/).filter(Boolean);
+            }
+            function tokenScore(qTokens, tTokens) {
+                let matches = 0;
+                for (const qt of qTokens) {
+                    if (qt.length < 3) continue;
+                    let hit = false;
+                    for (const tt of tTokens) {
+                        if (tt === qt) { hit = true; break; }
+                        if (qt.length >= 4 && (tt.startsWith(qt) || qt.startsWith(tt))) { hit = true; break; }
+                    }
+                    if (hit) matches++;
+                }
+                const precision = matches / Math.max(1, qTokens.length);
+                const recall = matches / Math.max(1, tTokens.length);
+                return precision + recall * 0.2;
+            }
+            function score(query, item) {
+                const qT = tokenize(query);
+                const qTokens = tokenize(item.q + " " + (item.cat || ""));
+                const aTokens = tokenize(item.a);
+                const sQ = tokenScore(qT, qTokens);
+                const sA = tokenScore(qT, aTokens);
+                return (sQ * 0.72) + (sA * 0.28);
+            }
+
+            const resultsEl = document.getElementById("results");
+            const matchCount = document.getElementById("matchCount");
+            const drawer = document.getElementById("drawer");
+            const drawerQ = document.getElementById("drawerQ");
+            const drawerA = document.getElementById("drawerA");
+            const drawerClose = document.getElementById("drawerClose");
+
+            function showDrawer(item) {
+                drawerQ.textContent = item.q;
+                drawerA.textContent = item.a;
+                drawer.style.display = "block";
+            }
+            drawerClose.addEventListener("click", () => {
+                drawer.style.display = "none";
+                drawerQ.textContent = "";
+                drawerA.textContent = "";
+            });
+
+            function renderResults(query) {
+                const q = normalize(query);
+                resultsEl.innerHTML = "";
+                drawer.style.display = "none";
+
+                if (!q) {
+                    matchCount.textContent = "Type to search";
+                    resultsEl.innerHTML = `<div class="subtle">Start typing above to see suggested matches here.</div>`;
+                    return;
+                }
+
+                const scored = faqs.map(item => ({ item, score: score(q, item) })).sort((a, b) => b.score - a.score);
+                const top = scored.slice(0, 7);
+                const good = top.filter(x => x.score >= 0.16);
+
+                matchCount.textContent = good.length ? `${good.length} matches` : "No close matches";
+
+                if (!good.length) {
+                    resultsEl.innerHTML = `
+        <div class="result" style="cursor:default">
+          <p class="q">No close match found.</p>
+          <p class="a">Try different keywords (e.g., “cost,” “assessed value,” “stations,” “engines,” “staffing,” “levy vs bond”).</p>
+          <div class="meta">Or submit your question below.</div>
+        </div>`;
+                    return;
+                }
+
+                good.forEach((x, idx) => {
+                    const r = document.createElement("div");
+                    r.className = "result";
+                    const preview = x.item.a.length > 180 ? x.item.a.slice(0, 180) + "…" : x.item.a;
+                    r.innerHTML = `
+        <p class="q">${x.item.q}</p>
+        <p class="a">${preview}</p>
+        <div class="meta">${idx === 0 ? "Best match" : "Related"} · ${x.item.cat}</div>
+      `;
+                    r.addEventListener("click", () => {
+                        showDrawer(x.item);
+                        // open and scroll to item in list
+                        const nodes = faqList.querySelectorAll("details");
+                        nodes.forEach(d => {
+                            const sum = d.querySelector("summary");
+                            if (sum && sum.textContent === x.item.q) {
+                                d.open = true;
+                                const cat = d.closest("details.catDetails");
+                                if (cat) cat.open = true;
+                                d.scrollIntoView({ behavior: "smooth", block: "center" });
+                            }
+                        });
+                    });
+                    resultsEl.appendChild(r);
+                });
+            }
+
+            const queryInput = document.getElementById("query");
+            const clearIcon = document.getElementById("clearIcon");
+
+            queryInput.addEventListener("input", (e) => {
+                const v = e.target.value || "";
+                clearIcon.style.display = v.trim() ? "block" : "none";
+                renderResults(v);
+            });
+
+            clearIcon.addEventListener("click", () => {
+                queryInput.value = "";
+                clearIcon.style.display = "none";
+                renderResults("");
+                queryInput.focus();
+            });
+
+            document.querySelectorAll(".chip").forEach(ch => {
+                ch.addEventListener("click", () => {
+                    const v = ch.getAttribute("data-q") || "";
+                    queryInput.value = v;
+                    clearIcon.style.display = v.trim() ? "block" : "none";
+                    renderResults(v);
+                    queryInput.focus();
+                });
+            });
+
+            renderResults("");
+
+            document.getElementById('sendBtn').addEventListener('click', () => {
+                const q = document.getElementById('submitQ').value.trim();
+                const email = document.getElementById('submitEmail').value.trim();
+                const status = document.getElementById('sendStatus');
+
+                if (!q) {
+                    status.style.display = 'inline';
+                    status.textContent = "Please enter a question first.";
+                    setTimeout(() => status.style.display = 'none', 3000);
+                    return;
+                }
+
+                const subject = encodeURIComponent("Bond FAQ Question");
+                const body = encodeURIComponent(`Question:\n${q}\n\nReply-to: ${email || "not provided"}`);
+
+                status.style.display = 'inline';
+                status.textContent = "Opening your email app…";
+                window.location.href = `mailto:info@setfa.org?subject=${subject}&body=${body}`;
+
+                setTimeout(() => status.style.display = 'none', 3000);
+            });
+        })();
+    </script>
+</body>
+
+</html>
