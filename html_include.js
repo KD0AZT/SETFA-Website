@@ -2,6 +2,7 @@ function loadElements() {
     placeHeader();
     placeNavbar();
     placeSidebar();
+    placeSidebar_r();
     placeFooter();
 }
 
@@ -43,6 +44,20 @@ function placeSidebar() {
     if (xmlhttp.status == 200) {
         newSidebar.innerHTML = xmlhttp.responseText;
         sidebar.replaceWith(newSidebar);
+    }
+    return;
+}
+
+function placeSidebar_r() {
+    var sidebar_r = document.getElementById("sidebar_r");
+    var newSidebar_r = document.createElement("div");
+    newSidebar_r.setAttribute("id", "sidebar_r");
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.open("GET", "/sidebar_r.html", false);
+    xmlhttp.send();
+    if (xmlhttp.status == 200) {
+        newSidebar_r.innerHTML = xmlhttp.responseText;
+        sidebar_r.replaceWith(newSidebar_r);
     }
     return;
 }

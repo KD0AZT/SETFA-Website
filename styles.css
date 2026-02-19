@@ -349,6 +349,56 @@ main {
     color: firebrick;
 }
 
+#sidebar_r {
+    flex-basis: 25%;
+    height: 95%;
+    background: none;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+#fire_danger_sign {
+    width: 100%;
+    border-radius: 1em;
+}
+
+#call_counter {
+    display: flex;
+    flex-direction: column;
+    height: 25%;
+    min-height: 15em;
+    border-radius: 0 0 3px 3px;
+    margin-top: .75em;
+}
+
+#call_counter_title {
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px #1a1a1a;
+    background-color: #776959;
+    padding: .5em;
+    border-bottom: 3px firebrick solid;
+    border-radius: 3px 3px 0 0;
+}
+
+#call_counter_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    background-color: #dfd9cd;
+    padding-left: 1em;
+    height: 5em;
+    border-radius: 0 0 3px 3px;
+}
+
+.call_counter_text {
+    display: inline-block;
+    width: 100%;
+}
+
 .main_info {
     background-color: #dfd9cd;
     border-top: .5em #dfd9cd solid;
@@ -362,6 +412,7 @@ main {
     border-radius: 3px;
     flex-grow: 1;
     margin-left: 2.5em;
+    margin-right: 2.5em;
     padding: 2em;
     padding-bottom: 0;
     flex-basis: 75%
@@ -1186,12 +1237,16 @@ footer ul li a:hover, footer ul li a:focus {
     }
 
     #sidebar {
-        width: 100%;
+        width: 92%;
         margin-bottom: 1em;
         flex: 1 1 50%;
     }
 
     #helpful_links {
+        display: none;
+    }
+
+    #sidebar_r {
         display: none;
     }
 
