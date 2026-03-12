@@ -89,6 +89,10 @@ body {
     display: block;
 }
 
+#navbar_bond_menu.desktop:hover .navbar_dropdown_list, #navbar_bond_menu.desktop:focus .navbar_dropdown_list {
+    display: block;
+}
+
 #navbar_employment_menu.desktop:hover .navbar_dropdown_list, #navbar_employment_menu.desktop:focus .navbar_dropdown_list {
     display: block;
 }
