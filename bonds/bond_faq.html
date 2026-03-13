@@ -6,10 +6,10 @@
     <title>SE Thurston Fire Authority — Bond FAQs</title>
     <style>
         :root {
-            --bg: #1F1A1C;
-            --card: #141214;
-            --panel: #171417;
-            --text: #ffffff;
+            --bg: #dfd9cd;
+            --card: #dfd9cd;
+            --panel: #dfd9cd;
+            --text: #000;
             --muted: #d0d0d0;
             --border: #2b2629;
             --chip: #050505;
@@ -24,8 +24,10 @@
 
         body {
             margin: 0;
-            background: #1a1a1a;
-            color: var(--text);
+            background: #757575;
+            background-image: url("/images/zenbg-1.png"), url("/images/zenbg-2.png");
+            background-repeat: repeat-x, repeat;
+            color: #000;
             font-family: system-ui, -apple-system, Segoe UI, Inter, Roboto, Arial, sans-serif;
             line-height: 1.45;
             height: 100vh;
@@ -64,6 +66,9 @@
 
         .brandText {
             text-align: left;
+            background: #dfd9cd;
+            padding: 1em;
+            border-radius: 18px;
         }
 
         .agency {
@@ -81,21 +86,23 @@
 
         header p {
             margin: 0;
-            color: var(--muted);
+            color: #000;
             font-size: .98rem
         }
 
         .wrap {
             width: 95%;
             padding: 14px 16px 28px;
+            display: flex;
+            flex-direction: column;
         }
 
         .topbar {
-            background: linear-gradient(180deg, #1b171a 0%, #131113 100%);
+            background: #dfd9cd;
             border: 1px solid var(--border);
             border-radius: 18px;
             padding: 16px;
-            box-shadow: var(--shadow1);
+            box-shadow: var(--shadow2);
         }
 
         .searchRow {
@@ -113,12 +120,12 @@
 
         .search input {
             width: 100%;
-            background: #000;
+            background: #dfd9cd;
             border: 1px solid var(--border);
             border-radius: 14px;
             padding: 14px 44px 14px 44px;
             font-size: 1rem;
-            color: var(--text);
+            color: #000;
             outline: none;
         }
 
@@ -134,7 +141,7 @@
             width: 18px;
             height: 18px;
             opacity: .85;
-            fill: var(--muted);
+            fill: #dfd9cd;
         }
 
         .icon.left {
@@ -160,8 +167,8 @@
 
         .chip {
             border: 1px solid var(--border);
-            background: var(--chip);
-            color: var(--muted);
+            background: #dfd9cd;
+            color: #000;
             padding: 7px 10px;
             border-radius: 999px;
             font-size: .9rem;
@@ -171,12 +178,12 @@
 
         .chip:hover {
             border-color: #3f383c;
-            color: #fff
+            color: #000;
         }
 
         .hint {
             margin-top: 10px;
-            color: var(--muted);
+            color: #000;
             font-size: .92rem;
         }
 
@@ -194,13 +201,21 @@
             }
         }
 
+        @media(max-width:960px) {
+            .grid {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+        }
+
         .card {
-            background: linear-gradient(180deg, #1d181b 0%, #121012 100%);
+            background: #dfd9cd;
             border: 1px solid var(--border);
             border-radius: 18px;
             padding: 16px;
-            box-shadow: var(--shadow1), var(--shadow2);
+            box-shadow: var(--shadow2);
             max-height: 100vh;
+            overflow: scroll;
         }
 
         #search_card {
@@ -221,7 +236,7 @@
         }
 
         .panelTitle span {
-            color: var(--muted);
+            color: #000;
             font-size: .9rem
         }
 
@@ -245,12 +260,12 @@
 
         .ans {
             margin-top: 8px;
-            color: #e8e8e8;
+            color: #000;
             white-space: pre-line;
         }
 
         .subtle {
-            color: var(--muted);
+            color: #000;
             font-size: .9rem;
         }
 
@@ -263,7 +278,7 @@
 
         .result {
             border: 1px solid var(--border);
-            background: linear-gradient(180deg, #0b0a0b 0%, #070607 100%);
+            background: #dfd9cd;
             border-radius: 14px;
             padding: 12px;
             cursor: pointer;
@@ -284,19 +299,19 @@
 
         .result .a {
             margin: 0;
-            color: #e8e8e8
+            color: #000
         }
 
         .result .meta {
             margin-top: 8px;
-            color: var(--muted);
+            color: #000;
             font-size: .85rem
         }
 
         .drawer {
             margin-top: 12px;
             border: 1px solid var(--border);
-            background: linear-gradient(180deg, #0d0c0d 0%, #080708 100%);
+            background: #dfd9cd;
             border-radius: 16px;
             padding: 14px;
             display: none;
@@ -317,8 +332,8 @@
 
         .xbtn {
             border: 1px solid var(--border);
-            background: #000;
-            color: #fff;
+            background: #dfd9cd;
+            color: #000;
             border-radius: 10px;
             padding: 6px 10px;
             cursor: pointer;
@@ -331,7 +346,7 @@
 
         .drawerBody {
             margin-top: 10px;
-            color: #eaeaea;
+            color: #000;
             white-space: pre-line;
         }
 
@@ -345,9 +360,9 @@
         input[type="text"],
         textarea {
             width: 100%;
-            background: #000;
+            background: #dfd9cd;
             border: 1px solid var(--border);
-            color: #fff;
+            color: #000;
             border-radius: 14px;
             padding: 12px;
             font-size: 1rem;
@@ -374,8 +389,8 @@
         }
 
         .btn {
-            border: 1px solid #fff;
-            background: #fff;
+            border: 1px solid #000;
+            background: #dfd9cd;
             color: #000;
             border-radius: 999px;
             padding: 10px 14px;
@@ -383,19 +398,19 @@
             cursor: pointer;
         }
 
-        .btn:hover {
-            background: #f2f2f2
+        .btn:hover, .btn:focus {
+            background: #f2f2f2;
         }
 
         .status {
-            color: var(--muted);
+            color: #000;
             font-size: .9rem;
             display: none
         }
 
         footer {
             text-align: center;
-            color: #9a9a9a;
+            color: #000;
             font-size: .9rem;
             padding: 18px 16px 26px;
             margin-top: auto;
@@ -405,8 +420,8 @@
             display: none;
             margin-top: 10px;
             border: 1px solid #5b2a2a;
-            background: #1a0f0f;
-            color: #ffd7d7;
+            background: #dfd9cd;
+            color: #000;
             border-radius: 14px;
             padding: 10px;
             font-size: .9rem
@@ -460,8 +475,6 @@
                 <div class="chip" data-q="previous bonds 1990 2025">Bond history</div>
             </div>
 
-            <div class="hint">Tip: Type a few words and choose the best match. If you don’t see your question, submit it
-                using the form on the right.</div>
             <div class="errorBar" id="errorBar"></div>
         </section>
 
@@ -504,7 +517,7 @@
                 </div>
 
                 <div class="subtle" style="margin-top:12px">
-                    Contact: <a href="mailto:info@setfa.org" class="link">info@setfa.org</a> &bullet; <a href="tel:3604582799" class="link">(360) 458-2799</a>
+                    <p>Contact: <a href="mailto:info@setfa.org" class="link">info@setfa.org</a> &bullet; <a href="tel:3604582799" class="link">(360) 458-2799</a></p>
                 </div>
             </aside>
         </section>

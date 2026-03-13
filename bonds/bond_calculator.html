@@ -7,10 +7,10 @@
     <title>SETFA Bond Cost Calculator</title>
     <style>
         :root {
-            --bg: #000000;
-            --card: #1a1a1a;
-            --muted: #cccccc;
-            --accent: #ffffff;
+            --bg: #757575;
+            --card: #dfd9cd;
+            --muted: #000;
+            --accent: #000;
             --border: #555555;
         }
 
@@ -21,7 +21,8 @@
         body {
             margin: 0;
             font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
-            background: var(--bg);
+            background-image: url("/images/zenbg-1.png"), url("/images/zenbg-2.png");
+            background-repeat: repeat-x, repeat;
             color: var(--accent);
             display: flex;
             flex-direction: column;
@@ -30,10 +31,16 @@
         }
 
         header {
+            margin-top: 3em;
             padding: 24px 16px;
             text-align: center;
             display: flex;
             flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            background: var(--card);
+            border-radius: 14px;
+            width: 760px;
         }
 
         header a {
@@ -59,7 +66,7 @@
         .wrap {
             max-width: 760px;
             margin: 0 auto;
-            padding: 16px;
+            padding-top: 2em;
         }
 
         .card {
@@ -90,7 +97,7 @@
         }
 
         input {
-            background: #000;
+            background: var(--card);
             border: 1px solid var(--border);
             color: var(--accent);
             border-radius: 10px;
@@ -100,7 +107,7 @@
         }
 
         input:focus {
-            border-color: #ffffff;
+            border-color: #000;
             box-shadow: 0 0 0 4px rgba(255, 255, 255, .15)
         }
 
@@ -113,7 +120,7 @@
 
         .pill {
             flex: 1 1 220px;
-            background: #000;
+            background: var(--card);
             border: 1px solid var(--border);
             border-radius: 12px;
             padding: 14px;
@@ -153,9 +160,9 @@
         }
 
         .btn {
-            border: 1px solid #ffffff;
-            background: #ffffff;
-            color: #000000;
+            border: 1px solid #000;
+            background: var(--card);
+            color: #000;
             border-radius: 999px;
             padding: 8px 12px;
             cursor: pointer;
@@ -167,7 +174,7 @@
         }
 
         footer {
-            color: #888;
+            color: #fff;
             font-size: .85rem;
             text-align: center;
             padding: 16px;
@@ -175,7 +182,7 @@
         }
 
         .rateBox {
-            background: #000;
+            background: var(--card);
             border: 1px solid var(--border);
             border-radius: 10px;
             padding: 12px 14px;
@@ -192,8 +199,7 @@
     <header>
         <a href="/index.html"><img src="/images/featured-image.svg"></a>
         <div>
-            <h1>SE Thurston Fire Authority Bond Reference Tool</h1>
-            <p>Providing general perspective on how the proposed bond rate applies to assessed property value.</p>
+            <h1>SE Thurston Fire Authority Bond Calculator</h1>
         </div>
     </header>
     <div class="wrap">
@@ -203,18 +209,14 @@
                     <label for="val">Assessed Property Value (USD)</label>
                     <input id="val" type="number" min="0" step="1000" placeholder="e.g., 400000" inputmode="decimal">
                     <div class="grid" id="quick">
-                        <button class="btn" data-v="250000">$250k</button>
+                        <button class="btn" data-v="20000">$200k</button>
                         <button class="btn" data-v="300000">$300k</button>
-                        <button class="btn" data-v="350000">$350k</button>
                         <button class="btn" data-v="400000">$400k</button>
-                        <button class="btn" data-v="450000">$450k</button>
                         <button class="btn" data-v="500000">$500k</button>
                         <button class="btn" data-v="600000">$600k</button>
                         <button class="btn" data-v="700000">$700k</button>
                         <button class="btn" data-v="800000">$800k</button>
-                        <button class="btn" data-v="900000">$900k</button>
-                        <button class="btn" data-v="1000000">$1.0M</button>
-                    </div>
+                        <button class="btn" data-v="900000">$900k</button>                    </div>
                 </div>
 
                 <div class="field">
@@ -239,16 +241,16 @@
                 </div>
             </div>
 
-            <div class="hint" style="margin-top:18px;">
+            <p class="hint" style="margin-top:18px; font-style: italic;">
                 This calculator is provided as a reference tool to help understand how the proposed bond rate is applied
                 to assessed property value. Figures shown are approximate. Final amounts are determined by Thurston
                 County based on the property’s official assessed value.
-            </div>
+            </p>
         </div>
     </div>
 
     <footer>
-        &copy; 2026 SE Thurston Fire Authority — Public Information Tool
+        <p>&copy; 2026 SE Thurston Fire Authority — Public Information Tool</p>
     </footer>
 
     <script>

@@ -543,6 +543,10 @@ main {
 
 }
 
+.subpage_unordered_list {
+    padding-bottom: 1em;
+}
+
 .subpage_table {
     margin-bottom: 1.5em;
     border: 1px solid #1a1a1a;
