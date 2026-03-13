@@ -334,6 +334,16 @@ main {
     justify-content: center;
 }
 
+@media (max-width: 1024px) {
+    #announcements_title, #helpful_links_title {
+        font-size: 100%;
+    }
+
+    .helpful_link a {
+        font-size:90%;
+    }
+}
+
 .helpful_link {
     width: 100%;
 }
