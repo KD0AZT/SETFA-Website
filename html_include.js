@@ -1,7 +1,7 @@
 function loadElements() {
     placeHeader();
     placeNavbar();
-    placeSidebar();
+    // placeSidebar();
     placeSidebar_r();
     placeFooter();
 }
