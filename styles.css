@@ -63,6 +63,7 @@ body {
     cursor: pointer;
     background: none;
     border: none;
+    border-left: 1px firebrick solid;
     font-size: 100%;
 }
 
