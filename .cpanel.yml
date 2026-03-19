@@ -20,12 +20,12 @@ deployment:
     - /bin/cp site.webmanifest $DEPLOYPATH
     - /bin/cp slideshow.js $DEPLOYPATH
     - /bin/cp styles.css $DEPLOYPATH
-    - /bin/cp -R about/ $DEPLOYPATH
-    - /bin/cp -R articles/ $DEPLOYPATH
-    - /bin/cp -R downloads/ $DEPLOYPATH
-    - /bin/cp -R images/ $DEPLOYPATH
-    - /bin/cp -R join/ $DEPLOYPATH
-    - /bin/cp -R news/ $DEPLOYPATH
-    - /bin/cp -R recent_news/ $DEPLOYPATH
-    - /bin/cp -R resources/ $DEPLOYPATH
+    - /bin/cp -R about $DEPLOYPATH
+    - /bin/cp -R articles $DEPLOYPATH
+    - /bin/cp -R downloads $DEPLOYPATH
+    - /bin/cp -R images $DEPLOYPATH
+    - /bin/cp -R join $DEPLOYPATH
+    - /bin/cp -R news $DEPLOYPATH
+    - /bin/cp -R recent_news $DEPLOYPATH
+    - /bin/cp -R resources $DEPLOYPATH
     /bin/cp index.html $DEPLOYPATH
