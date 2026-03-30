@@ -1278,6 +1278,7 @@ footer ul li a:hover, footer ul li a:focus {
 
     #news_title {
         margin: 0;
+        margin-bottom: 3px;
         align-self: center;
     }
 
