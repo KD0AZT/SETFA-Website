@@ -1276,6 +1276,11 @@ footer ul li a:hover, footer ul li a:focus {
         margin-bottom: 2em;
     }
 
+    #news_title {
+        margin: 0;
+        align-self: center;
+    }
+
     .footer_second, .footer_third, .footer_fourth {
         display: none;
     }
