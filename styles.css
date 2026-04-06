@@ -379,16 +379,19 @@ main {
     border-radius: 1em;
 }
 
-#call_counter {
+.sidebar_tile {
     display: flex;
     flex-direction: column;
-    height: 25%;
-    min-height: 15em;
     border-radius: 0 0 3px 3px;
     margin-top: .75em;
+    margin-bottom: .25em;
 }
 
-#call_counter_title {
+#prescribed_burns {
+    flex-grow: 1;
+}
+
+.sidebar_title {
     text-align: center;
     color: white;
     text-shadow: 2px 2px #1a1a1a;
@@ -398,7 +401,7 @@ main {
     border-radius: 3px 3px 0 0;
 }
 
-#call_counter_list {
+.sidebar_list {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -407,9 +410,25 @@ main {
     padding-left: 1em;
     height: 5em;
     border-radius: 0 0 3px 3px;
+    padding-right: 1em;
 }
 
-.call_counter_text {
+#prescribed_burns_list {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 1em;
+    overflow-y: scroll;
+}
+
+#prescribed_burns_list hr {
+    margin: .2em 0;
+    width: 100%;
+}
+
+.sidebar_text {
     display: inline-block;
     width: 100%;
 }
