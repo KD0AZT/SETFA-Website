@@ -383,13 +383,25 @@ main {
 }
 
 #sidebar_r {
-    flex-basis: 25%;
+    flex-basis: 15%;
     height: 95%;
     background: none;
     display: flex;
     flex-direction: column;
     overflow: hidden;
     border-radius: 3px;
+}
+
+@media (min-height: 1080) {
+    #sidebar_r {
+        flex-basis: 25%;
+        height: 95%;
+        background: none;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        border-radius: 3px;
+    }
 }
 
 #fire_danger_sign {
