@@ -144,50 +144,20 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: calc(33vh - 2.5em);
+    height: calc(25vh - 3.5em);
+    margin-top: 1em;
     width: 100vw;
 }
 
 #logo_slideshow {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 65%;
-    width: 45%;
-    overflow: hidden;
-    background: linear-gradient(90deg,rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .5) 10%,rgba(0, 0, 0, .5) 90%, rgba(0, 0, 0, 0) 100%);
-    border-radius: 3px;
-}
-
-#slideshow_slide_1, #slideshow_slide_2, #slideshow_slide_3, #slideshow_slide_4, #slideshow_slide_5, #slideshow_slide_6, #slideshow_slide_7, #slideshow_slide_8, #slideshow_slide_9, #slideshow_slide_10, #slideshow_slide_11, #slideshow_slide_12 {
     display: none;
-    width: 100%;
-    opacity: 1.0;
-    animation-name: fade-in;
-    animation-duration: 7s;
-    animation-timing-function: linear;
-}
-
-@keyframes fade-in {
-    0% { opacity: 0.0; }
-    20% { opacity: 1.0; }
-    50% { opacity: 1.0; }
-    80% { opacity: 1.0; }
-    100% { opacity: 0.0; }
-}
-
-@media (min-width: 1500px) {
-    .logo_slideshow {
-        background-position: 50% 55%;
-    }
 }
 
 #slogan_phone {
     text-align: center;
-    padding: 1em;
+    padding: 0.5em 1em;
     width: 100%;
-    height: 42%;
+    height: fit-content;
     border-top: 3px goldenrod solid;
     border-bottom: 3px goldenrod solid;
     background-color: #1a1a1a;
@@ -198,26 +168,73 @@ body {
 }
 
 #slogan_phone * {
-    font-size: 100%;
     font-weight: bold;
 }
 
 .header_text {
     color: white;
+    font-size: 80%;
 }
 
 .emergency {
+    font-size: 100%;
     color: red;
     text-decoration: underline;
     padding-bottom: .2em;
 }
 
+@media (min-height: 1080px) {
+
+    #main_header {
+        margin-top: 0;
+    }
+
+    .header_text {
+        font-size: 100%;
+    }
+
+    #logo_slideshow {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* height: 65%; */
+        width: 55%;
+        overflow: hidden;
+        background: linear-gradient(90deg,rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .5) 10%,rgba(0, 0, 0, .5) 90%, rgba(0, 0, 0, 0) 100%);
+        border-radius: 3px;
+    }
+
+    #slideshow_slide_1, #slideshow_slide_2, #slideshow_slide_3, #slideshow_slide_4, #slideshow_slide_5, #slideshow_slide_6, #slideshow_slide_7, #slideshow_slide_8, #slideshow_slide_9, #slideshow_slide_10, #slideshow_slide_11, #slideshow_slide_12 {
+        display: none;
+        width: 100%;
+        opacity: 1.0;
+        animation-name: fade-in;
+        animation-duration: 7s;
+        animation-timing-function: linear;
+    }
+
+    @keyframes fade-in {
+        0% { opacity: 0.0; }
+        20% { opacity: 1.0; }
+        50% { opacity: 1.0; }
+        80% { opacity: 1.0; }
+        100% { opacity: 0.0; }
+    }
+}
+
+@media (min-width: 1500px) {
+    #logo_slideshow {
+        background-position: 50% 55%;
+    }
+}
+
 main {
     display: flex;
     flex-direction: row;
-    height: calc(66vh - 2em);
+    height: calc(75vh - 2.2em);
     width: 100%;
-    padding: 1em 5em;
+    padding: 0 5em;
     align-items: center;
     justify-content: center;
 }
