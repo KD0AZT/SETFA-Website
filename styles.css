@@ -932,6 +932,10 @@ main {
     margin-bottom: .5em;
 }
 
+.violations_ordered_list_item {
+    padding-bottom: 1em;
+}
+
 #hiring_2025 a {
     padding-bottom: 1em;
 }
