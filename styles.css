@@ -916,6 +916,10 @@ main {
     margin-bottom: 0;
 }
 
+.unwanted_meds_list {
+    list-style: disc;
+}
+
 #wildfire_prevention {
     align-items: flex-start;
 }
